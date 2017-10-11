@@ -1,0 +1,7 @@
+.jfx-hamburger StackPane {
+    -fx-background-color: white;
+}
+.jfx-hamburger {
+    -fx-background-color:  #00BCD4;
+    /*-fx-effect: dropshadow(gaussian, rgba(0,0,0,0.8), 2, 0, 0, 0);*/
+}

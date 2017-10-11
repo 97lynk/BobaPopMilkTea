@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="MilkTeaManagement.jnlp">
+  <information>
+    <title>MilkTeaManagement</title>
+    <vendor>97lynk</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="MilkTeaManagement.jar" size="2465190" download="eager" />
+    <jar href="lib\fontawesomefx-8.9.jar" size="571068" download="eager" />
+    <jar href="lib\jfoenix.jar" size="2386535" download="eager" />
+    <jar href="lib\jooq-3.10.0.jar" size="2086337" download="eager" />
+    <jar href="lib\jooq-checker-3.10.0.jar" size="10994" download="eager" />
+    <jar href="lib\jooq-codegen-3.10.0.jar" size="137038" download="eager" />
+    <jar href="lib\jooq-codegen-maven-3.10.0.jar" size="15827" download="eager" />
+    <jar href="lib\jooq-meta-3.10.0.jar" size="521899" download="eager" />
+    <jar href="lib\jooq-meta-extensions-3.10.0.jar" size="16702" download="eager" />
+    <jar href="lib\jooq-scala_2.11-3.10.0.jar" size="101095" download="eager" />
+    <jar href="lib\jooq-scala_2.12-3.10.0.jar" size="101251" download="eager" />
+    <jar href="lib\mysql-connector-java-5.1.23-bin.jar" size="834126" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="MilkTeaManagement" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="BoBaPop.Main.BoBaPopMain"  name="MilkTeaManagement" />
+  <update check="always"/>
+</jnlp>
