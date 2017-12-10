@@ -4,7 +4,7 @@
 package BoBaPop.Model.tables;
 
 
-import BoBaPop.Model.Coffeemilkteamanager;
+import BoBaPop.Model.DbMilktea;
 import BoBaPop.Model.Indexes;
 import BoBaPop.Model.Keys;
 import BoBaPop.Model.tables.records.ItemsRecord;
@@ -26,8 +26,7 @@ import org.jooq.impl.TableImpl;
 
 
 /**
- * InnoDB free: 6144 kB; (`BillID`) REFER `coffeemilkteamanager/bills`(`BillID`); 
- * (
+ * InnoDB free: 23552 kB; (`BillID`) REFER `db_milktea/bills`(`BillID`); (`DrinkID`
  */
 @Generated(
     value = {
@@ -39,10 +38,10 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Items extends TableImpl<ItemsRecord> {
 
-    private static final long serialVersionUID = -1467565305;
+    private static final long serialVersionUID = -1279314137;
 
     /**
-     * The reference instance of <code>coffeemilkteamanager.items</code>
+     * The reference instance of <code>db_milktea.items</code>
      */
     public static final Items ITEMS = new Items();
 
@@ -55,41 +54,41 @@ public class Items extends TableImpl<ItemsRecord> {
     }
 
     /**
-     * The column <code>coffeemilkteamanager.items.BillID</code>.
+     * The column <code>db_milktea.items.BillID</code>.
      */
     public final TableField<ItemsRecord, Integer> BILLID = createField("BillID", org.jooq.impl.SQLDataType.INTEGER.nullable(false).defaultValue(org.jooq.impl.DSL.inline("0", org.jooq.impl.SQLDataType.INTEGER)), this, "");
 
     /**
-     * The column <code>coffeemilkteamanager.items.DrinkID</code>.
+     * The column <code>db_milktea.items.DrinkID</code>.
      */
     public final TableField<ItemsRecord, Integer> DRINKID = createField("DrinkID", org.jooq.impl.SQLDataType.INTEGER.nullable(false).defaultValue(org.jooq.impl.DSL.inline("0", org.jooq.impl.SQLDataType.INTEGER)), this, "");
 
     /**
-     * The column <code>coffeemilkteamanager.items.Quantity</code>.
+     * The column <code>db_milktea.items.Quantity</code>.
      */
     public final TableField<ItemsRecord, Integer> QUANTITY = createField("Quantity", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
     /**
-     * The column <code>coffeemilkteamanager.items.Total</code>.
+     * The column <code>db_milktea.items.Total</code>.
      */
     public final TableField<ItemsRecord, Double> TOTAL = createField("Total", org.jooq.impl.SQLDataType.FLOAT, this, "");
 
     /**
-     * Create a <code>coffeemilkteamanager.items</code> table reference
+     * Create a <code>db_milktea.items</code> table reference
      */
     public Items() {
         this(DSL.name("items"), null);
     }
 
     /**
-     * Create an aliased <code>coffeemilkteamanager.items</code> table reference
+     * Create an aliased <code>db_milktea.items</code> table reference
      */
     public Items(String alias) {
         this(DSL.name(alias), ITEMS);
     }
 
     /**
-     * Create an aliased <code>coffeemilkteamanager.items</code> table reference
+     * Create an aliased <code>db_milktea.items</code> table reference
      */
     public Items(Name alias) {
         this(alias, ITEMS);
@@ -100,7 +99,7 @@ public class Items extends TableImpl<ItemsRecord> {
     }
 
     private Items(Name alias, Table<ItemsRecord> aliased, Field<?>[] parameters) {
-        super(alias, null, aliased, parameters, "InnoDB free: 6144 kB; (`BillID`) REFER `coffeemilkteamanager/bills`(`BillID`); (");
+        super(alias, null, aliased, parameters, "InnoDB free: 23552 kB; (`BillID`) REFER `db_milktea/bills`(`BillID`); (`DrinkID`");
     }
 
     /**
@@ -108,7 +107,7 @@ public class Items extends TableImpl<ItemsRecord> {
      */
     @Override
     public Schema getSchema() {
-        return Coffeemilkteamanager.COFFEEMILKTEAMANAGER;
+        return DbMilktea.DB_MILKTEA;
     }
 
     /**

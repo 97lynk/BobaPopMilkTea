@@ -1,68 +1,66 @@
 package BoBaPop.DA;
 
+import BoBaPop.Util.MessageBox;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 import org.jooq.DSLContext;
 import org.jooq.SQLDialect;
 import org.jooq.impl.DSL;
+import tray.notification.NotificationType;
 
 public class ConnectToMySql {
 
     // JDBC driver name and database URL
-    static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-    static final String DB_URL = "jdbc:mysql://localhost/coffeemilkteamanager?useUnicode=yes&characterEncoding=UTF-8";
+    private static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
+    private static final String DB_URL = "jdbc:mysql://localhost/db_milktea?useUnicode=yes&characterEncoding=UTF-8";
 
     //  Database credentials
-    static final String USER = "root";
-    static final String PASS = "lumia435";
+    private static final String USER = "root";
+    private static final String PASS = "123";
 
-    public static DSLContext usingDSLContext() throws Exception {
+    public static DSLContext context = null;
+
+    public static void initialize() {
         try {
-            return DSL.using(createConnection(), SQLDialect.MYSQL);
-        } catch (Exception ex) {
-            throw ex;
+            context = usingDSLContext();
+        } catch (SQLException | ClassNotFoundException ex) {
+            MessageBox.showAndWait(
+                    "Excepttion: " + ex.getClass().getSimpleName(),
+                    ex.getMessage(),
+                    NotificationType.ERROR);
         }
     }
 
-    public static Connection createConnection(String user, String password) throws SQLException, Exception {
-        Connection connection = null;
-        try {
-            //Register JDBC driver
-            Class.forName("com.mysql.jdbc.Driver");
+    public static DSLContext usingDSLContext() throws SQLException, ClassNotFoundException {
+        return DSL.using(DB_URL, USER, PASS);
+    }
 
-            //Open a connection
-            System.out.println("Connecting to a selected database...");
-            connection = DriverManager.getConnection(DB_URL, user, password);
-            if (connection != null) {
-                System.out.println("Connected database successfully...");
-            }
-        } catch (SQLException se) {
-            //Handle errors for JDBC
-            throw se;
-        } catch (Exception e) {
-            //Handle errors for Class.forName
-            throw e;
+    public static Connection createConnection(String user, String password) throws SQLException, ClassNotFoundException {
+        Connection connection = null;
+
+        //Register JDBC driver
+        Class.forName(JDBC_DRIVER);
+
+        //Open a connection
+        System.out.println("Connecting to a selected database...");
+        connection = DriverManager.getConnection(DB_URL, user, password);
+        if (connection != null) {
+            System.out.println("Connected database successfully...");
         }
+
+        //Handle errors for Class.forName
         return connection;
     }
 
-    public static Connection createConnection() throws SQLException, Exception {
-        try {
-            return createConnection(USER, PASS);
-        } catch (Exception ex) {
-            throw ex;
-        }
+    public static Connection createConnection() throws SQLException, ClassNotFoundException {
+        return createConnection(USER, PASS);
+
     }
 
-    public static DSLContext usingDSLContext(String user, String password) throws Exception {
-        try {
-            return DSL.using(createConnection(user, password), SQLDialect.MYSQL);
-        } catch (Exception ex) {
-            throw ex;
-        }
+    public static DSLContext usingDSLContext(String user, String password) throws SQLException, ClassNotFoundException {
+        return DSL.using(createConnection(user, password), SQLDialect.MYSQL);
     }
 
 }

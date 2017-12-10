@@ -4,10 +4,21 @@
 package BoBaPop.Model;
 
 
-import BoBaPop.Model.routines.Chargedgrandtotal;
-import BoBaPop.Model.routines.Chargedtotalonitem;
-import BoBaPop.Model.routines.Isstaying;
-import BoBaPop.Model.routines.SpGetdatasortedby;
+import BoBaPop.Model.routines.FtChargedGrandtotal;
+import BoBaPop.Model.routines.FtChargedTotalOnItem;
+import BoBaPop.Model.routines.FtIsStaying;
+import BoBaPop.Model.routines.SpChargedGrandTotal;
+import BoBaPop.Model.routines.SpDeleteBill;
+import BoBaPop.Model.routines.SpDeleteTable;
+import BoBaPop.Model.routines.SpGrossRevenueByDrink;
+import BoBaPop.Model.routines.SpGrossRevenueByDrinktype;
+import BoBaPop.Model.routines.SpGrossRevenueOfDrink;
+import BoBaPop.Model.routines.SpGrossRevenueOfDrinktype;
+import BoBaPop.Model.routines.SpPaying;
+import BoBaPop.Model.routines.SpQuantityDrinkSoldByPeriod;
+import BoBaPop.Model.routines.SpQuantityDrinktypeSoldByPeriod;
+
+import java.sql.Timestamp;
 
 import javax.annotation.Generated;
 
@@ -16,7 +27,7 @@ import org.jooq.Field;
 
 
 /**
- * Convenience access to all stored procedures and functions in coffeemilkteamanager
+ * Convenience access to all stored procedures and functions in db_milktea
  */
 @Generated(
     value = {
@@ -29,10 +40,10 @@ import org.jooq.Field;
 public class Routines {
 
     /**
-     * Call <code>coffeemilkteamanager.ChargedGrandTotal</code>
+     * Call <code>db_milktea.ft_Charged_GrandTotal</code>
      */
-    public static Double chargedgrandtotal(Configuration configuration, Integer billId) {
-        Chargedgrandtotal f = new Chargedgrandtotal();
+    public static Double ftChargedGrandtotal(Configuration configuration, Integer billId) {
+        FtChargedGrandtotal f = new FtChargedGrandtotal();
         f.setBillId(billId);
 
         f.execute(configuration);
@@ -40,30 +51,30 @@ public class Routines {
     }
 
     /**
-     * Get <code>coffeemilkteamanager.ChargedGrandTotal</code> as a field.
+     * Get <code>db_milktea.ft_Charged_GrandTotal</code> as a field.
      */
-    public static Field<Double> chargedgrandtotal(Integer billId) {
-        Chargedgrandtotal f = new Chargedgrandtotal();
+    public static Field<Double> ftChargedGrandtotal(Integer billId) {
+        FtChargedGrandtotal f = new FtChargedGrandtotal();
         f.setBillId(billId);
 
         return f.asField();
     }
 
     /**
-     * Get <code>coffeemilkteamanager.ChargedGrandTotal</code> as a field.
+     * Get <code>db_milktea.ft_Charged_GrandTotal</code> as a field.
      */
-    public static Field<Double> chargedgrandtotal(Field<Integer> billId) {
-        Chargedgrandtotal f = new Chargedgrandtotal();
+    public static Field<Double> ftChargedGrandtotal(Field<Integer> billId) {
+        FtChargedGrandtotal f = new FtChargedGrandtotal();
         f.setBillId(billId);
 
         return f.asField();
     }
 
     /**
-     * Call <code>coffeemilkteamanager.ChargedTotalOnItem</code>
+     * Call <code>db_milktea.ft_Charged_Total_On_Item</code>
      */
-    public static Double chargedtotalonitem(Configuration configuration, Integer billId, Integer drinkId) {
-        Chargedtotalonitem f = new Chargedtotalonitem();
+    public static Double ftChargedTotalOnItem(Configuration configuration, Integer billId, Integer drinkId) {
+        FtChargedTotalOnItem f = new FtChargedTotalOnItem();
         f.setBillId(billId);
         f.setDrinkId(drinkId);
 
@@ -72,10 +83,10 @@ public class Routines {
     }
 
     /**
-     * Get <code>coffeemilkteamanager.ChargedTotalOnItem</code> as a field.
+     * Get <code>db_milktea.ft_Charged_Total_On_Item</code> as a field.
      */
-    public static Field<Double> chargedtotalonitem(Integer billId, Integer drinkId) {
-        Chargedtotalonitem f = new Chargedtotalonitem();
+    public static Field<Double> ftChargedTotalOnItem(Integer billId, Integer drinkId) {
+        FtChargedTotalOnItem f = new FtChargedTotalOnItem();
         f.setBillId(billId);
         f.setDrinkId(drinkId);
 
@@ -83,10 +94,10 @@ public class Routines {
     }
 
     /**
-     * Get <code>coffeemilkteamanager.ChargedTotalOnItem</code> as a field.
+     * Get <code>db_milktea.ft_Charged_Total_On_Item</code> as a field.
      */
-    public static Field<Double> chargedtotalonitem(Field<Integer> billId, Field<Integer> drinkId) {
-        Chargedtotalonitem f = new Chargedtotalonitem();
+    public static Field<Double> ftChargedTotalOnItem(Field<Integer> billId, Field<Integer> drinkId) {
+        FtChargedTotalOnItem f = new FtChargedTotalOnItem();
         f.setBillId(billId);
         f.setDrinkId(drinkId);
 
@@ -94,10 +105,10 @@ public class Routines {
     }
 
     /**
-     * Call <code>coffeemilkteamanager.IsStaying</code>
+     * Call <code>db_milktea.ft_Is_Staying</code>
      */
-    public static Byte isstaying(Configuration configuration, Integer tableid) {
-        Isstaying f = new Isstaying();
+    public static Byte ftIsStaying(Configuration configuration, Integer tableid) {
+        FtIsStaying f = new FtIsStaying();
         f.setTableid(tableid);
 
         f.execute(configuration);
@@ -105,31 +116,129 @@ public class Routines {
     }
 
     /**
-     * Get <code>coffeemilkteamanager.IsStaying</code> as a field.
+     * Get <code>db_milktea.ft_Is_Staying</code> as a field.
      */
-    public static Field<Byte> isstaying(Integer tableid) {
-        Isstaying f = new Isstaying();
+    public static Field<Byte> ftIsStaying(Integer tableid) {
+        FtIsStaying f = new FtIsStaying();
         f.setTableid(tableid);
 
         return f.asField();
     }
 
     /**
-     * Get <code>coffeemilkteamanager.IsStaying</code> as a field.
+     * Get <code>db_milktea.ft_Is_Staying</code> as a field.
      */
-    public static Field<Byte> isstaying(Field<Integer> tableid) {
-        Isstaying f = new Isstaying();
+    public static Field<Byte> ftIsStaying(Field<Integer> tableid) {
+        FtIsStaying f = new FtIsStaying();
         f.setTableid(tableid);
 
         return f.asField();
     }
 
     /**
-     * Call <code>coffeemilkteamanager.sp_GetDataSortedBy</code>
+     * Call <code>db_milktea.sp_charged_grand_total</code>
      */
-    public static void spGetdatasortedby(Configuration configuration, String colName) {
-        SpGetdatasortedby p = new SpGetdatasortedby();
-        p.setColName(colName);
+    public static void spChargedGrandTotal(Configuration configuration, Integer billId) {
+        SpChargedGrandTotal p = new SpChargedGrandTotal();
+        p.setBillId(billId);
+
+        p.execute(configuration);
+    }
+
+    /**
+     * Call <code>db_milktea.sp_delete_bill</code>
+     */
+    public static void spDeleteBill(Configuration configuration, Integer billid) {
+        SpDeleteBill p = new SpDeleteBill();
+        p.setBillid(billid);
+
+        p.execute(configuration);
+    }
+
+    /**
+     * Call <code>db_milktea.sp_delete_table</code>
+     */
+    public static void spDeleteTable(Configuration configuration, Integer tableid) {
+        SpDeleteTable p = new SpDeleteTable();
+        p.setTableid(tableid);
+
+        p.execute(configuration);
+    }
+
+    /**
+     * Call <code>db_milktea.sp_gross_revenue_by_drink</code>
+     */
+    public static void spGrossRevenueByDrink(Configuration configuration, Timestamp fromdate, Timestamp todate) {
+        SpGrossRevenueByDrink p = new SpGrossRevenueByDrink();
+        p.setFromdate(fromdate);
+        p.setTodate(todate);
+
+        p.execute(configuration);
+    }
+
+    /**
+     * Call <code>db_milktea.sp_gross_revenue_by_drinktype</code>
+     */
+    public static void spGrossRevenueByDrinktype(Configuration configuration, Timestamp fromdate, Timestamp todate) {
+        SpGrossRevenueByDrinktype p = new SpGrossRevenueByDrinktype();
+        p.setFromdate(fromdate);
+        p.setTodate(todate);
+
+        p.execute(configuration);
+    }
+
+    /**
+     * Call <code>db_milktea.sp_gross_revenue_of_drink</code>
+     */
+    public static void spGrossRevenueOfDrink(Configuration configuration, Timestamp fromdate, Timestamp todate, Integer drinkid) {
+        SpGrossRevenueOfDrink p = new SpGrossRevenueOfDrink();
+        p.setFromdate(fromdate);
+        p.setTodate(todate);
+        p.setDrinkid(drinkid);
+
+        p.execute(configuration);
+    }
+
+    /**
+     * Call <code>db_milktea.sp_gross_revenue_of_drinktype</code>
+     */
+    public static void spGrossRevenueOfDrinktype(Configuration configuration, Timestamp fromdate, Timestamp todate, Integer drinktypeid) {
+        SpGrossRevenueOfDrinktype p = new SpGrossRevenueOfDrinktype();
+        p.setFromdate(fromdate);
+        p.setTodate(todate);
+        p.setDrinktypeid(drinktypeid);
+
+        p.execute(configuration);
+    }
+
+    /**
+     * Call <code>db_milktea.sp_paying</code>
+     */
+    public static void spPaying(Configuration configuration, Integer billId) {
+        SpPaying p = new SpPaying();
+        p.setBillId(billId);
+
+        p.execute(configuration);
+    }
+
+    /**
+     * Call <code>db_milktea.sp_quantity_drinktype_sold_by_period</code>
+     */
+    public static void spQuantityDrinktypeSoldByPeriod(Configuration configuration, Timestamp fromdate, Timestamp todate) {
+        SpQuantityDrinktypeSoldByPeriod p = new SpQuantityDrinktypeSoldByPeriod();
+        p.setFromdate(fromdate);
+        p.setTodate(todate);
+
+        p.execute(configuration);
+    }
+
+    /**
+     * Call <code>db_milktea.sp_quantity_drink_sold_by_period</code>
+     */
+    public static void spQuantityDrinkSoldByPeriod(Configuration configuration, Timestamp fromdate, Timestamp todate) {
+        SpQuantityDrinkSoldByPeriod p = new SpQuantityDrinkSoldByPeriod();
+        p.setFromdate(fromdate);
+        p.setTodate(todate);
 
         p.execute(configuration);
     }

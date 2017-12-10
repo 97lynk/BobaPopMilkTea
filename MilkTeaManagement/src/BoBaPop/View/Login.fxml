@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.DisplacementMap?>
+<?import javafx.scene.effect.FloatMap?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="paneLogin" prefHeight="458.0" prefWidth="693.0" style="-fx-background-color: #006EA9;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BoBaPop.Controller.Login">
+
+    <children>
+        <Pane layoutX="385.0" layoutY="43.0" prefHeight="392.0" prefWidth="288.0" style="-fx-background-color: RGB(216, 231, 241,0.85);">
+            <children>
+                <ImageView fx:id="viewLoginImage" fitHeight="109.0" fitWidth="116.0" focusTraversable="true" layoutX="95.0" layoutY="14.0" opacity="0.76" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/logo2.png" />
+                    </image>
+                    <effect>
+                        <Blend />
+                    </effect>
+                </ImageView>
+                <JFXTextField fx:id="txtUser" labelFloat="true" layoutX="20.0" layoutY="145.0" prefHeight="35.0" prefWidth="249.0" promptText="Tài khoản" style="-fx-background-color: white; -fx-border-radius: 2px;" unFocusColor="#3474d3ed">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </JFXTextField>
+                <JFXPasswordField fx:id="txtPassword" labelFloat="true" layoutX="20.0" layoutY="224.0" prefHeight="35.0" prefWidth="249.0" promptText="Mật khẩu" style="-fx-background-color: white; -fx-border-radius: 2px;" unFocusColor="#355dd6">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </JFXPasswordField>
+                <JFXButton fx:id="btnSignIn" layoutX="21.0" layoutY="338.0" onAction="#onClickButtonSignIn" prefHeight="37.0" prefWidth="249.0" style="-fx-background-color: #0073B1;" text="Đăng nhập" textFill="#f5f3f3">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </JFXButton>
+                <Hyperlink layoutX="87.0" layoutY="306.0" prefHeight="23.0" prefWidth="116.0" text="Quên mật khẩu?" underline="true" />
+                <Label fx:id="lblStatus" layoutX="20.0" layoutY="281.0" prefHeight="27.0" prefWidth="249.0" textFill="RED" />
+            </children>
+        </Pane>
+        <Label ellipsisString="key.unspecified" layoutX="11.0" layoutY="137.0" prefHeight="109.0" prefWidth="219.0" style="text: no;" text="Coffee &amp; Milk Tea Shop Manager" textFill="#ace2f5" textOverrun="CLIP" wrapText="true">
+            <font>
+                <Font name="System Bold" size="30.0" />
+            </font>
+            <effect>
+                <DisplacementMap>
+                    <mapData>
+                        <FloatMap />
+                    </mapData>
+                </DisplacementMap>
+            </effect>
+        </Label>
+        <Label alignment="TOP_LEFT" layoutX="11.0" layoutY="232.0" prefHeight="99.0" prefWidth="230.0" text="Ứng dụng cho phép thực hiện các giao dịch và quản lý" textAlignment="JUSTIFY" textFill="#fafffe" wrapText="true">
+            <font>
+                <Font size="18.0" />
+            </font>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+        </Label>
+        <ImageView fx:id="viewLogo" fitHeight="88.0" fitWidth="169.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../images/logo1.png" />
+            </image>
+        </ImageView>
+        <JFXButton buttonType="RAISED" layoutX="646.0" onAction="#onClickButtonClose" prefHeight="37.0" prefWidth="42.0" text=" " textFill="WHITE">
+            <font>
+                <Font name="System Bold" />
+            </font>
+            <graphic>
+                <FontAwesomeIconView fill="WHITE" glyphName="CLOSE" size="30" />
+            </graphic>
+        </JFXButton>
+    </children>
+</AnchorPane>

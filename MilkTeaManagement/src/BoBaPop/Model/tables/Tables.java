@@ -4,7 +4,7 @@
 package BoBaPop.Model.tables;
 
 
-import BoBaPop.Model.Coffeemilkteamanager;
+import BoBaPop.Model.DbMilktea;
 import BoBaPop.Model.Indexes;
 import BoBaPop.Model.Keys;
 import BoBaPop.Model.tables.records.TablesRecord;
@@ -27,7 +27,7 @@ import org.jooq.impl.TableImpl;
 
 
 /**
- * InnoDB free: 6144 kB
+ * InnoDB free: 23552 kB
  */
 @Generated(
     value = {
@@ -39,10 +39,10 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Tables extends TableImpl<TablesRecord> {
 
-    private static final long serialVersionUID = 1532239929;
+    private static final long serialVersionUID = 558657355;
 
     /**
-     * The reference instance of <code>coffeemilkteamanager.tables</code>
+     * The reference instance of <code>db_milktea.tables</code>
      */
     public static final Tables TABLES = new Tables();
 
@@ -55,31 +55,31 @@ public class Tables extends TableImpl<TablesRecord> {
     }
 
     /**
-     * The column <code>coffeemilkteamanager.tables.TableID</code>.
+     * The column <code>db_milktea.tables.TableID</code>.
      */
     public final TableField<TablesRecord, Integer> TABLEID = createField("TableID", org.jooq.impl.SQLDataType.INTEGER.nullable(false).identity(true), this, "");
 
     /**
-     * The column <code>coffeemilkteamanager.tables.TableName</code>.
+     * The column <code>db_milktea.tables.TableName</code>.
      */
     public final TableField<TablesRecord, String> TABLENAME = createField("TableName", org.jooq.impl.SQLDataType.VARCHAR(50), this, "");
 
     /**
-     * Create a <code>coffeemilkteamanager.tables</code> table reference
+     * Create a <code>db_milktea.tables</code> table reference
      */
     public Tables() {
         this(DSL.name("tables"), null);
     }
 
     /**
-     * Create an aliased <code>coffeemilkteamanager.tables</code> table reference
+     * Create an aliased <code>db_milktea.tables</code> table reference
      */
     public Tables(String alias) {
         this(DSL.name(alias), TABLES);
     }
 
     /**
-     * Create an aliased <code>coffeemilkteamanager.tables</code> table reference
+     * Create an aliased <code>db_milktea.tables</code> table reference
      */
     public Tables(Name alias) {
         this(alias, TABLES);
@@ -90,7 +90,7 @@ public class Tables extends TableImpl<TablesRecord> {
     }
 
     private Tables(Name alias, Table<TablesRecord> aliased, Field<?>[] parameters) {
-        super(alias, null, aliased, parameters, "InnoDB free: 6144 kB");
+        super(alias, null, aliased, parameters, "InnoDB free: 23552 kB");
     }
 
     /**
@@ -98,7 +98,7 @@ public class Tables extends TableImpl<TablesRecord> {
      */
     @Override
     public Schema getSchema() {
-        return Coffeemilkteamanager.COFFEEMILKTEAMANAGER;
+        return DbMilktea.DB_MILKTEA;
     }
 
     /**

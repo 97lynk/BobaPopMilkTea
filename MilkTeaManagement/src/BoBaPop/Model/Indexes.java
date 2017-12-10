@@ -5,12 +5,11 @@ package BoBaPop.Model;
 
 
 import BoBaPop.Model.tables.Bills;
-import BoBaPop.Model.tables.Customers;
-import BoBaPop.Model.tables.Customertypes;
 import BoBaPop.Model.tables.Drinks;
 import BoBaPop.Model.tables.Drinktypes;
 import BoBaPop.Model.tables.Items;
 import BoBaPop.Model.tables.Tables;
+import BoBaPop.Model.tables.Users;
 
 import javax.annotation.Generated;
 
@@ -20,8 +19,7 @@ import org.jooq.impl.AbstractKeys;
 
 
 /**
- * A class modelling indexes of tables of the <code>coffeemilkteamanager</code> 
- * schema.
+ * A class modelling indexes of tables of the <code>db_milktea</code> schema.
  */
 @Generated(
     value = {
@@ -37,35 +35,29 @@ public class Indexes {
     // INDEX definitions
     // -------------------------------------------------------------------------
 
-    public static final Index BILLS_CUSTOMERID = Indexes0.BILLS_CUSTOMERID;
     public static final Index BILLS_PRIMARY = Indexes0.BILLS_PRIMARY;
     public static final Index BILLS_TABLEID = Indexes0.BILLS_TABLEID;
-    public static final Index CUSTOMERS_CUSTOMERTYPEID = Indexes0.CUSTOMERS_CUSTOMERTYPEID;
-    public static final Index CUSTOMERS_PRIMARY = Indexes0.CUSTOMERS_PRIMARY;
-    public static final Index CUSTOMERTYPES_PRIMARY = Indexes0.CUSTOMERTYPES_PRIMARY;
     public static final Index DRINKS_DRINKTYPEID = Indexes0.DRINKS_DRINKTYPEID;
     public static final Index DRINKS_PRIMARY = Indexes0.DRINKS_PRIMARY;
     public static final Index DRINKTYPES_PRIMARY = Indexes0.DRINKTYPES_PRIMARY;
     public static final Index ITEMS_DRINKID = Indexes0.ITEMS_DRINKID;
     public static final Index ITEMS_PRIMARY = Indexes0.ITEMS_PRIMARY;
     public static final Index TABLES_PRIMARY = Indexes0.TABLES_PRIMARY;
+    public static final Index USERS_PRIMARY = Indexes0.USERS_PRIMARY;
 
     // -------------------------------------------------------------------------
     // [#1459] distribute members to avoid static initialisers > 64kb
     // -------------------------------------------------------------------------
 
     private static class Indexes0 extends AbstractKeys {
-        public static Index BILLS_CUSTOMERID = createIndex("CustomerID", Bills.BILLS, new OrderField[] { Bills.BILLS.CUSTOMERID }, false);
         public static Index BILLS_PRIMARY = createIndex("PRIMARY", Bills.BILLS, new OrderField[] { Bills.BILLS.BILLID }, true);
         public static Index BILLS_TABLEID = createIndex("TableID", Bills.BILLS, new OrderField[] { Bills.BILLS.TABLEID }, false);
-        public static Index CUSTOMERS_CUSTOMERTYPEID = createIndex("CustomerTypeID", Customers.CUSTOMERS, new OrderField[] { Customers.CUSTOMERS.CUSTOMERTYPEID }, false);
-        public static Index CUSTOMERS_PRIMARY = createIndex("PRIMARY", Customers.CUSTOMERS, new OrderField[] { Customers.CUSTOMERS.CUSTOMERID }, true);
-        public static Index CUSTOMERTYPES_PRIMARY = createIndex("PRIMARY", Customertypes.CUSTOMERTYPES, new OrderField[] { Customertypes.CUSTOMERTYPES.CUSTOMERTYPEID }, true);
         public static Index DRINKS_DRINKTYPEID = createIndex("DrinkTypeID", Drinks.DRINKS, new OrderField[] { Drinks.DRINKS.DRINKTYPEID }, false);
         public static Index DRINKS_PRIMARY = createIndex("PRIMARY", Drinks.DRINKS, new OrderField[] { Drinks.DRINKS.DRINKID }, true);
         public static Index DRINKTYPES_PRIMARY = createIndex("PRIMARY", Drinktypes.DRINKTYPES, new OrderField[] { Drinktypes.DRINKTYPES.DRINKTYPEID }, true);
         public static Index ITEMS_DRINKID = createIndex("DrinkID", Items.ITEMS, new OrderField[] { Items.ITEMS.DRINKID }, false);
         public static Index ITEMS_PRIMARY = createIndex("PRIMARY", Items.ITEMS, new OrderField[] { Items.ITEMS.BILLID, Items.ITEMS.DRINKID }, true);
         public static Index TABLES_PRIMARY = createIndex("PRIMARY", Tables.TABLES, new OrderField[] { Tables.TABLES.TABLEID }, true);
+        public static Index USERS_PRIMARY = createIndex("PRIMARY", Users.USERS, new OrderField[] { Users.USERS.ID }, true);
     }
 }

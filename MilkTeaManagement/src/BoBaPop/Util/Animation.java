@@ -37,8 +37,6 @@ public class Animation {
         playTranslateTransition(node, duration, delay, fromX, toX, fromY, toY, 1, false);
     }
 
-    
-    
     public static void playFadeTransition(
             Node node, Duration duration, Duration delay,
             double fromValue, double toValue,
@@ -60,8 +58,6 @@ public class Animation {
         playFadeTransition(node, duration, delay, fromValue, toValue, 1, false);
     }
 
-    
-    
     public static void playRotateTransition(
             Node node, Duration duration, Duration delay,
             double byAngle,

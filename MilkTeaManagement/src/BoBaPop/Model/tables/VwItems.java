@@ -4,7 +4,7 @@
 package BoBaPop.Model.tables;
 
 
-import BoBaPop.Model.Coffeemilkteamanager;
+import BoBaPop.Model.DbMilktea;
 import BoBaPop.Model.tables.records.VwItemsRecord;
 
 import javax.annotation.Generated;
@@ -31,10 +31,10 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class VwItems extends TableImpl<VwItemsRecord> {
 
-    private static final long serialVersionUID = 1065344202;
+    private static final long serialVersionUID = 1967280256;
 
     /**
-     * The reference instance of <code>coffeemilkteamanager.vw_items</code>
+     * The reference instance of <code>db_milktea.vw_items</code>
      */
     public static final VwItems VW_ITEMS = new VwItems();
 
@@ -47,66 +47,66 @@ public class VwItems extends TableImpl<VwItemsRecord> {
     }
 
     /**
-     * The column <code>coffeemilkteamanager.vw_items.BillID</code>.
+     * The column <code>db_milktea.vw_items.BillID</code>.
      */
     public final TableField<VwItemsRecord, Integer> BILLID = createField("BillID", org.jooq.impl.SQLDataType.INTEGER.nullable(false).defaultValue(org.jooq.impl.DSL.inline("0", org.jooq.impl.SQLDataType.INTEGER)), this, "");
 
     /**
-     * The column <code>coffeemilkteamanager.vw_items.DrinkID</code>.
+     * The column <code>db_milktea.vw_items.DrinkID</code>.
      */
     public final TableField<VwItemsRecord, Integer> DRINKID = createField("DrinkID", org.jooq.impl.SQLDataType.INTEGER.nullable(false).defaultValue(org.jooq.impl.DSL.inline("0", org.jooq.impl.SQLDataType.INTEGER)), this, "");
 
     /**
-     * The column <code>coffeemilkteamanager.vw_items.Quantity</code>.
-     */
-    public final TableField<VwItemsRecord, Integer> QUANTITY = createField("Quantity", org.jooq.impl.SQLDataType.INTEGER, this, "");
-
-    /**
-     * The column <code>coffeemilkteamanager.vw_items.Total</code>.
-     */
-    public final TableField<VwItemsRecord, Double> TOTAL = createField("Total", org.jooq.impl.SQLDataType.FLOAT, this, "");
-
-    /**
-     * The column <code>coffeemilkteamanager.vw_items.DrinkName</code>.
-     */
-    public final TableField<VwItemsRecord, String> DRINKNAME = createField("DrinkName", org.jooq.impl.SQLDataType.VARCHAR(50), this, "");
-
-    /**
-     * The column <code>coffeemilkteamanager.vw_items.UnitPrice</code>.
-     */
-    public final TableField<VwItemsRecord, Double> UNITPRICE = createField("UnitPrice", org.jooq.impl.SQLDataType.FLOAT, this, "");
-
-    /**
-     * The column <code>coffeemilkteamanager.vw_items.Image</code>.
-     */
-    public final TableField<VwItemsRecord, byte[]> IMAGE = createField("Image", org.jooq.impl.SQLDataType.BLOB, this, "");
-
-    /**
-     * The column <code>coffeemilkteamanager.vw_items.DrinkTypeID</code>.
+     * The column <code>db_milktea.vw_items.DrinkTypeID</code>.
      */
     public final TableField<VwItemsRecord, Integer> DRINKTYPEID = createField("DrinkTypeID", org.jooq.impl.SQLDataType.INTEGER.nullable(false).defaultValue(org.jooq.impl.DSL.inline("0", org.jooq.impl.SQLDataType.INTEGER)), this, "");
 
     /**
-     * The column <code>coffeemilkteamanager.vw_items.DrinkTypeName</code>.
+     * The column <code>db_milktea.vw_items.DrinkName</code>.
+     */
+    public final TableField<VwItemsRecord, String> DRINKNAME = createField("DrinkName", org.jooq.impl.SQLDataType.VARCHAR(50), this, "");
+
+    /**
+     * The column <code>db_milktea.vw_items.DrinkTypeName</code>.
      */
     public final TableField<VwItemsRecord, String> DRINKTYPENAME = createField("DrinkTypeName", org.jooq.impl.SQLDataType.CLOB, this, "");
 
     /**
-     * Create a <code>coffeemilkteamanager.vw_items</code> table reference
+     * The column <code>db_milktea.vw_items.Quantity</code>.
+     */
+    public final TableField<VwItemsRecord, Integer> QUANTITY = createField("Quantity", org.jooq.impl.SQLDataType.INTEGER, this, "");
+
+    /**
+     * The column <code>db_milktea.vw_items.UnitPrice</code>.
+     */
+    public final TableField<VwItemsRecord, Double> UNITPRICE = createField("UnitPrice", org.jooq.impl.SQLDataType.FLOAT, this, "");
+
+    /**
+     * The column <code>db_milktea.vw_items.Total</code>.
+     */
+    public final TableField<VwItemsRecord, Double> TOTAL = createField("Total", org.jooq.impl.SQLDataType.FLOAT, this, "");
+
+    /**
+     * The column <code>db_milktea.vw_items.Image</code>.
+     */
+    public final TableField<VwItemsRecord, byte[]> IMAGE = createField("Image", org.jooq.impl.SQLDataType.BLOB, this, "");
+
+    /**
+     * Create a <code>db_milktea.vw_items</code> table reference
      */
     public VwItems() {
         this(DSL.name("vw_items"), null);
     }
 
     /**
-     * Create an aliased <code>coffeemilkteamanager.vw_items</code> table reference
+     * Create an aliased <code>db_milktea.vw_items</code> table reference
      */
     public VwItems(String alias) {
         this(DSL.name(alias), VW_ITEMS);
     }
 
     /**
-     * Create an aliased <code>coffeemilkteamanager.vw_items</code> table reference
+     * Create an aliased <code>db_milktea.vw_items</code> table reference
      */
     public VwItems(Name alias) {
         this(alias, VW_ITEMS);
@@ -125,7 +125,7 @@ public class VwItems extends TableImpl<VwItemsRecord> {
      */
     @Override
     public Schema getSchema() {
-        return Coffeemilkteamanager.COFFEEMILKTEAMANAGER;
+        return DbMilktea.DB_MILKTEA;
     }
 
     /**

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="rootPane" prefHeight="669.0" prefWidth="1107.0" style="-fx-background-color: #00BCD4;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <JFXTabPane layoutY="33.0" prefHeight="615.0" prefWidth="728.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="35.0">
+         <tabs>
+            <Tab text="Items">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;">
+                     <children>
+                        <JFXDrawer fx:id="drawerChart" defaultDrawerSize="-1.0" layoutX="44.0" layoutY="88.0" prefHeight="423.0" prefWidth="878.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="80.0" />
+                        <JFXButton fx:id="btnDrawLineChart" contentDisplay="CENTER" layoutX="44.0" layoutY="22.0" prefHeight="43.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 0;" text=" " textFill="#f8f3f3">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="#00b3ca" glyphName="BAR_CHART" size="30" />
+                           </graphic>
+                        </JFXButton>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Tables">
+              <content>
+                <AnchorPane prefWidth="600.0" style="-fx-background-color: white;">
+                     <children>
+                        <JFXButton id="btnReload" fx:id="btnReload" contentDisplay="CENTER" layoutX="1037.0" layoutY="14.0" prefHeight="43.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 0;" text=" " textFill="#f8f3f3" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="15.0">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="#00b3ca" glyphName="REFRESH" size="30" />
+                           </graphic>
+                        </JFXButton>
+                        <GridPane fx:id="paneMap" hgap="2.0" prefHeight="499.0" prefWidth="1038.0" vgap="2.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="70.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints fillHeight="false" maxHeight="191.0" minHeight="10.0" prefHeight="188.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </GridPane>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="83.0" layoutY="15.0" prefHeight="45.0" prefWidth="1024.0" text="Table Management" textFill="#00b3ca" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="0.0">
+                           <font>
+                              <Font name="System Bold" size="30.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Today">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="509.0" prefWidth="990.0" style="-fx-background-color: white;">
+                     <children>
+                        <TableView fx:id="tableBill" layoutX="5.0" layoutY="7.0" prefHeight="580.0" prefWidth="1107.0" style="-fx-border-color: #ddd; -fx-border-radius: 4px;" stylesheets="@../../Style/table.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <styleClass>
+                              <String fx:value="column-header" />
+                              <String fx:value="filler" />
+                              <String fx:value="table-row-cell" />
+                              <String fx:value="table-view" />
+                           </styleClass>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+         </tabs>
+      </JFXTabPane>
+      <JFXHamburger fx:id="hbg" prefHeight="30.0" prefWidth="40.0" stylesheets="@../../Style/hamburger.css" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <JFXDrawer fx:id="navBar" defaultDrawerSize="300.0" layoutY="40.0" overLayVisible="false" prefHeight="505.0" prefWidth="3.0" resizableOnDrag="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="40.0" />
+   </children>
+</AnchorPane>

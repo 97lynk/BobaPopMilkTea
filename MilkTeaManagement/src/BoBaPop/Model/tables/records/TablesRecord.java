@@ -16,7 +16,7 @@ import org.jooq.impl.UpdatableRecordImpl;
 
 
 /**
- * InnoDB free: 6144 kB
+ * InnoDB free: 23552 kB
  */
 @Generated(
     value = {
@@ -28,31 +28,31 @@ import org.jooq.impl.UpdatableRecordImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class TablesRecord extends UpdatableRecordImpl<TablesRecord> implements Record2<Integer, String> {
 
-    private static final long serialVersionUID = -567948360;
+    private static final long serialVersionUID = -292028016;
 
     /**
-     * Setter for <code>coffeemilkteamanager.tables.TableID</code>.
+     * Setter for <code>db_milktea.tables.TableID</code>.
      */
     public void setTableid(Integer value) {
         set(0, value);
     }
 
     /**
-     * Getter for <code>coffeemilkteamanager.tables.TableID</code>.
+     * Getter for <code>db_milktea.tables.TableID</code>.
      */
     public Integer getTableid() {
         return (Integer) get(0);
     }
 
     /**
-     * Setter for <code>coffeemilkteamanager.tables.TableName</code>.
+     * Setter for <code>db_milktea.tables.TableName</code>.
      */
     public void setTablename(String value) {
         set(1, value);
     }
 
     /**
-     * Getter for <code>coffeemilkteamanager.tables.TableName</code>.
+     * Getter for <code>db_milktea.tables.TableName</code>.
      */
     public String getTablename() {
         return (String) get(1);

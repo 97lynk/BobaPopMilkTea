@@ -4,7 +4,7 @@
 package BoBaPop.Model.tables;
 
 
-import BoBaPop.Model.Coffeemilkteamanager;
+import BoBaPop.Model.DbMilktea;
 import BoBaPop.Model.Indexes;
 import BoBaPop.Model.Keys;
 import BoBaPop.Model.tables.records.DrinktypesRecord;
@@ -27,7 +27,7 @@ import org.jooq.impl.TableImpl;
 
 
 /**
- * InnoDB free: 6144 kB
+ * InnoDB free: 23552 kB
  */
 @Generated(
     value = {
@@ -39,10 +39,10 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Drinktypes extends TableImpl<DrinktypesRecord> {
 
-    private static final long serialVersionUID = 1621985412;
+    private static final long serialVersionUID = 1035330328;
 
     /**
-     * The reference instance of <code>coffeemilkteamanager.drinktypes</code>
+     * The reference instance of <code>db_milktea.drinktypes</code>
      */
     public static final Drinktypes DRINKTYPES = new Drinktypes();
 
@@ -55,31 +55,31 @@ public class Drinktypes extends TableImpl<DrinktypesRecord> {
     }
 
     /**
-     * The column <code>coffeemilkteamanager.drinktypes.DrinkTypeID</code>.
+     * The column <code>db_milktea.drinktypes.DrinkTypeID</code>.
      */
     public final TableField<DrinktypesRecord, Integer> DRINKTYPEID = createField("DrinkTypeID", org.jooq.impl.SQLDataType.INTEGER.nullable(false).identity(true), this, "");
 
     /**
-     * The column <code>coffeemilkteamanager.drinktypes.DrinkTypeName</code>.
+     * The column <code>db_milktea.drinktypes.DrinkTypeName</code>.
      */
     public final TableField<DrinktypesRecord, String> DRINKTYPENAME = createField("DrinkTypeName", org.jooq.impl.SQLDataType.CLOB, this, "");
 
     /**
-     * Create a <code>coffeemilkteamanager.drinktypes</code> table reference
+     * Create a <code>db_milktea.drinktypes</code> table reference
      */
     public Drinktypes() {
         this(DSL.name("drinktypes"), null);
     }
 
     /**
-     * Create an aliased <code>coffeemilkteamanager.drinktypes</code> table reference
+     * Create an aliased <code>db_milktea.drinktypes</code> table reference
      */
     public Drinktypes(String alias) {
         this(DSL.name(alias), DRINKTYPES);
     }
 
     /**
-     * Create an aliased <code>coffeemilkteamanager.drinktypes</code> table reference
+     * Create an aliased <code>db_milktea.drinktypes</code> table reference
      */
     public Drinktypes(Name alias) {
         this(alias, DRINKTYPES);
@@ -90,7 +90,7 @@ public class Drinktypes extends TableImpl<DrinktypesRecord> {
     }
 
     private Drinktypes(Name alias, Table<DrinktypesRecord> aliased, Field<?>[] parameters) {
-        super(alias, null, aliased, parameters, "InnoDB free: 6144 kB");
+        super(alias, null, aliased, parameters, "InnoDB free: 23552 kB");
     }
 
     /**
@@ -98,7 +98,7 @@ public class Drinktypes extends TableImpl<DrinktypesRecord> {
      */
     @Override
     public Schema getSchema() {
-        return Coffeemilkteamanager.COFFEEMILKTEAMANAGER;
+        return DbMilktea.DB_MILKTEA;
     }
 
     /**

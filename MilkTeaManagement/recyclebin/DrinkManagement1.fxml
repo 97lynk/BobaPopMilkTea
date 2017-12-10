@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="646.0" prefWidth="797.0" stylesheets="@../../Style/splitpane.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BoBaPop.Controller.DrinkManagement">
+   <children>
+      <MenuBar prefHeight="27.0" prefWidth="786.0" stylesheets="@../../Style/menubarDrink.css">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <SplitPane dividerPositions="0.5" prefHeight="488.0" prefWidth="652.0" stylesheets="@../../Style/splitpane.css" VBox.vgrow="ALWAYS">
+         <items>
+            <VBox maxWidth="400.0" minWidth="100.0" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" VBox.vgrow="ALWAYS">
+                    <items>
+                        <AnchorPane prefHeight="365.0" prefWidth="393.0" style="-fx-background-color: white;">
+                           <children>
+                              <ImageView fx:id="imgDrink" fitHeight="390.0" fitWidth="390.0" layoutX="13.0" layoutY="105.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <viewport>
+                                    <Rectangle2D />
+                                 </viewport>
+                              </ImageView>
+                              <JFXTextField fx:id="txtDrinkName" labelFloat="true" layoutX="11.0" layoutY="46.0" promptText="Drink name" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+                              <JFXTextField fx:id="txtPrice" labelFloat="true" layoutX="14.0" layoutY="204.0" promptText="Unit price" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+                              <JFXTextField fx:id="txtUri" labelFloat="true" layoutX="14.0" layoutY="281.0" prefHeight="26.0" promptText="Image" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+                              <JFXButton fx:id="btnFile" layoutX="18.0" layoutY="176.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="18.0" minWidth="33.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="54.0" style="-fx-padding: 0;" text=". . ." AnchorPane.leftAnchor="18.0">
+                                 <font>
+                                    <Font name="System Bold" size="36.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXComboBox fx:id="cbxDrinkType" labelFloat="true" layoutX="14.0" layoutY="121.0" promptText="Drink type" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+                           </children>
+                        </AnchorPane>
+                        <HBox maxHeight="300.0" minHeight="0.0" prefHeight="200.0">
+                           <children>
+                              <ListView fx:id="lvDrinkType" onMouseClicked="#clickItemListDrinkType" prefHeight="236.0" prefWidth="288.0">
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </HBox.margin>
+                              </ListView>
+                              <AnchorPane prefHeight="237.0" prefWidth="318.0" style="-fx-border-color: #ddd; -fx-background-color: white;" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <JFXButton alignment="CENTER" contentDisplay="CENTER" layoutX="12.0" layoutY="86.0" minHeight="18.0" minWidth="38.0" mnemonicParsing="false" onAction="#clickSaveDrinkType" prefHeight="32.0" prefWidth="88.0" style="-fx-background-color: #ddd; -fx-background-radius: 0; -fx-text-fill: #2B579A;" text="Lưu" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="10.0">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <JFXButton alignment="CENTER" layoutX="112.0" layoutY="86.0" minHeight="18.0" minWidth="38.0" mnemonicParsing="false" onAction="#clickDeleteDrinkType" prefHeight="32.0" prefWidth="82.0" style="-fx-background-color: #ddd; -fx-background-radius: 0; -fx-text-fill: #2B579A;" text="Xóa" textFill="WHITE" AnchorPane.rightAnchor="10.0">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <JFXTextField fx:id="txtDrinkTypeName" labelFloat="true" layoutX="61.0" layoutY="42.0" prefHeight="26.0" prefWidth="110.0" promptText="Drink type" AnchorPane.leftAnchor="65.0" AnchorPane.rightAnchor="10.0" />
+                                    <Label layoutX="14.0" layoutY="137.0" text="Click '&gt;&gt;' button to maniplute" textAlignment="CENTER" AnchorPane.leftAnchor="14.0" />
+                                    <Button fx:id="btnDir" layoutX="15.0" layoutY="42.0" mnemonicParsing="false" onAction="#clickDir" style="-fx-background-color: white; -fx-border-color: #ddd; -fx-text-fill: #2B579A; -fx-font-weight: bold;" text="&gt;&gt;" AnchorPane.leftAnchor="10.0" />
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </HBox.margin>
+                              </AnchorPane>
+                           </children>
+                        </HBox>
+                    </items>
+                  </SplitPane>
+               </children>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <HBox prefHeight="43.0" prefWidth="397.0" style="-fx-background-color: white;">
+                     <children>
+                        <JFXButton fx:id="btnAdd" mnemonicParsing="false" onAction="#clickadd" prefHeight="32.0" prefWidth="90.0" style="-fx-background-insets: 1; -fx-background-color: white; -fx-border-color: #ddd; -fx-text-fill: #2B579A;" text="Insert" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                        <JFXButton fx:id="btnEdit" mnemonicParsing="false" onAction="#clickedit" prefHeight="32.0" prefWidth="90.0" style="-fx-background-insets: 1; -fx-background-color: white; -fx-border-color: #ddd; -fx-text-fill: #2B579A;" text="Edit" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                        <JFXButton fx:id="btnDel" mnemonicParsing="false" onAction="#clickdel" prefHeight="39.0" prefWidth="90.0" style="-fx-background-insets: 1; -fx-background-color: white; -fx-border-color: #ddd; -fx-text-fill: #2B579A;" text="Remove" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+                  <TableView fx:id="tableDrink" onMouseClicked="#clickTableDrink" prefHeight="577.0" prefWidth="385.0" stylesheets="@../../Style/table.css" VBox.vgrow="ALWAYS" />
+               </children>
+            </VBox>
+         </items>
+      </SplitPane>
+   </children>
+</VBox>

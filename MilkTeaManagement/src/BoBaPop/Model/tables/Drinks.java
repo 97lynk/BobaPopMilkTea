@@ -4,7 +4,7 @@
 package BoBaPop.Model.tables;
 
 
-import BoBaPop.Model.Coffeemilkteamanager;
+import BoBaPop.Model.DbMilktea;
 import BoBaPop.Model.Indexes;
 import BoBaPop.Model.Keys;
 import BoBaPop.Model.tables.records.DrinksRecord;
@@ -27,7 +27,7 @@ import org.jooq.impl.TableImpl;
 
 
 /**
- * InnoDB free: 6144 kB; (`DrinkTypeID`) REFER `coffeemilkteamanager/drinktypes`(`D
+ * InnoDB free: 23552 kB; (`DrinkTypeID`) REFER `db_milktea/drinktypes`(`DrinkTypeI
  */
 @Generated(
     value = {
@@ -39,10 +39,10 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Drinks extends TableImpl<DrinksRecord> {
 
-    private static final long serialVersionUID = 1694381451;
+    private static final long serialVersionUID = -1658485191;
 
     /**
-     * The reference instance of <code>coffeemilkteamanager.drinks</code>
+     * The reference instance of <code>db_milktea.drinks</code>
      */
     public static final Drinks DRINKS = new Drinks();
 
@@ -55,51 +55,46 @@ public class Drinks extends TableImpl<DrinksRecord> {
     }
 
     /**
-     * The column <code>coffeemilkteamanager.drinks.DrinkID</code>.
+     * The column <code>db_milktea.drinks.DrinkID</code>.
      */
     public final TableField<DrinksRecord, Integer> DRINKID = createField("DrinkID", org.jooq.impl.SQLDataType.INTEGER.nullable(false).identity(true), this, "");
 
     /**
-     * The column <code>coffeemilkteamanager.drinks.DrinkName</code>.
+     * The column <code>db_milktea.drinks.DrinkName</code>.
      */
     public final TableField<DrinksRecord, String> DRINKNAME = createField("DrinkName", org.jooq.impl.SQLDataType.VARCHAR(50), this, "");
 
     /**
-     * The column <code>coffeemilkteamanager.drinks.DrinkTypeID</code>.
+     * The column <code>db_milktea.drinks.DrinkTypeID</code>.
      */
     public final TableField<DrinksRecord, Integer> DRINKTYPEID = createField("DrinkTypeID", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
     /**
-     * The column <code>coffeemilkteamanager.drinks.UnitPrice</code>.
+     * The column <code>db_milktea.drinks.UnitPrice</code>.
      */
     public final TableField<DrinksRecord, Double> UNITPRICE = createField("UnitPrice", org.jooq.impl.SQLDataType.FLOAT, this, "");
 
     /**
-     * The column <code>coffeemilkteamanager.drinks.Image</code>.
+     * The column <code>db_milktea.drinks.Image</code>.
      */
     public final TableField<DrinksRecord, byte[]> IMAGE = createField("Image", org.jooq.impl.SQLDataType.BLOB, this, "");
 
     /**
-     * The column <code>coffeemilkteamanager.drinks.Icon</code>.
-     */
-    public final TableField<DrinksRecord, byte[]> ICON = createField("Icon", org.jooq.impl.SQLDataType.BLOB, this, "");
-
-    /**
-     * Create a <code>coffeemilkteamanager.drinks</code> table reference
+     * Create a <code>db_milktea.drinks</code> table reference
      */
     public Drinks() {
         this(DSL.name("drinks"), null);
     }
 
     /**
-     * Create an aliased <code>coffeemilkteamanager.drinks</code> table reference
+     * Create an aliased <code>db_milktea.drinks</code> table reference
      */
     public Drinks(String alias) {
         this(DSL.name(alias), DRINKS);
     }
 
     /**
-     * Create an aliased <code>coffeemilkteamanager.drinks</code> table reference
+     * Create an aliased <code>db_milktea.drinks</code> table reference
      */
     public Drinks(Name alias) {
         this(alias, DRINKS);
@@ -110,7 +105,7 @@ public class Drinks extends TableImpl<DrinksRecord> {
     }
 
     private Drinks(Name alias, Table<DrinksRecord> aliased, Field<?>[] parameters) {
-        super(alias, null, aliased, parameters, "InnoDB free: 6144 kB; (`DrinkTypeID`) REFER `coffeemilkteamanager/drinktypes`(`D");
+        super(alias, null, aliased, parameters, "InnoDB free: 23552 kB; (`DrinkTypeID`) REFER `db_milktea/drinktypes`(`DrinkTypeI");
     }
 
     /**
@@ -118,7 +113,7 @@ public class Drinks extends TableImpl<DrinksRecord> {
      */
     @Override
     public Schema getSchema() {
-        return Coffeemilkteamanager.COFFEEMILKTEAMANAGER;
+        return DbMilktea.DB_MILKTEA;
     }
 
     /**

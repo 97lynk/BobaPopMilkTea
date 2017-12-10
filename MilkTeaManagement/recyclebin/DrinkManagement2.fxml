@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="618.0" prefWidth="796.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BoBaPop.Controller.DrinkManagement">
+   <children>
+      <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="364.0" prefWidth="385.0" style="-fx-border-color: #ddd; -fx-background-color: white;" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0">
+         <children>
+            <ImageView fx:id="imgDrink" fitHeight="182.0" fitWidth="260.0" layoutX="50.0" layoutY="173.0" pickOnBounds="true" preserveRatio="true" />
+            <Label layoutX="22.0" layoutY="17.0" prefHeight="17.0" prefWidth="56.0" text="Tên" />
+            <JFXTextField fx:id="txtDrinkName" layoutX="93.0" layoutY="13.0" prefHeight="26.0" prefWidth="145.0" />
+            <Label layoutX="22.0" layoutY="50.0" prefHeight="17.0" prefWidth="56.0" text="Loại" />
+            <Label layoutX="22.0" layoutY="84.0" prefHeight="17.0" prefWidth="56.0" text="Giá" />
+            <JFXTextField fx:id="txtPrice" layoutX="93.0" layoutY="80.0" prefHeight="26.0" prefWidth="145.0" />
+            <Label layoutX="22.0" layoutY="120.0" prefHeight="17.0" prefWidth="56.0" text="Hình Ảnh" />
+            <JFXTextField fx:id="txtUri" layoutX="93.0" layoutY="116.0" prefHeight="26.0" prefWidth="110.0" />
+            <JFXButton fx:id="btnAdd" layoutX="273.0" layoutY="10.0" mnemonicParsing="false" onAction="#clickadd" prefHeight="32.0" prefWidth="68.0" style="-fx-background-color: #00B3CA;" text="Thêm" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font></JFXButton>
+            <JFXButton fx:id="btnEdit" layoutX="273.0" layoutY="52.0" mnemonicParsing="false" onAction="#clickedit" prefHeight="32.0" prefWidth="68.0" style="-fx-background-color: #00B3CA;" text="Sữa" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font></JFXButton>
+            <JFXButton fx:id="btnDel" layoutX="273.0" layoutY="90.0" mnemonicParsing="false" onAction="#clickdel" prefHeight="32.0" prefWidth="68.0" style="-fx-background-color: #00B3CA;" text="Xóa" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font></JFXButton>
+            <JFXButton fx:id="btnFile" layoutX="210.0" layoutY="118.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="18.0" minWidth="33.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="33.0" style="-fx-padding: 0;" text=". . .">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font></JFXButton>
+            <Label layoutX="24.0" layoutY="-7.0" prefHeight="18.0" prefWidth="138.0" style="-fx-background-color: white;" text="Thông Tin Thức Uống" AnchorPane.topAnchor="-7.0" />
+            <JFXComboBox fx:id="cbxDrinkType" layoutX="97.0" layoutY="54.0" prefHeight="22.0" prefWidth="138.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="14.0" layoutY="402.0" prefHeight="187.0" prefWidth="385.0" style="-fx-border-color: #ddd; -fx-background-color: white;" AnchorPane.bottomAnchor="29.0" AnchorPane.leftAnchor="14.0">
+         <children>
+            <ListView fx:id="listypedrink" layoutX="14.0" layoutY="21.0" prefHeight="156.0" prefWidth="177.0" />
+            <JFXButton layoutX="193.0" layoutY="44.0" minHeight="18.0" minWidth="33.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="33.0" style="-fx-background-color: PINK; -fx-padding: 0; -fx-text-fill: BLACK;" text="&gt;&gt;" textFill="#030303" />
+            <JFXButton fx:id="btnSave" layoutX="220.0" layoutY="86.0" minHeight="18.0" minWidth="38.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="68.0" style="-fx-background-color: #00B3CA;" text="Lưu" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font></JFXButton>
+            <JFXButton fx:id="btnRemove" layoutX="306.0" layoutY="86.0" minHeight="18.0" minWidth="38.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="68.0" style="-fx-background-color: #00B3CA;" text="Xóa" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font></JFXButton>
+            <Label layoutX="254.0" layoutY="14.0" prefHeight="26.0" prefWidth="46.0" text="Tên" />
+            <JFXTextField fx:id="txtDrinkTypeName" layoutX="261.0" layoutY="42.0" prefHeight="26.0" prefWidth="110.0" />
+            <Label layoutX="186.0" layoutY="138.0" prefHeight="26.0" prefWidth="158.0" text="Click nút hồng để thao tác" textAlignment="CENTER" />
+         </children></AnchorPane>
+      <Label layoutX="51.0" layoutY="393.0" prefHeight="18.0" prefWidth="167.0" style="-fx-background-color: white;" text="Thông Tin Loại Thức Uống" AnchorPane.leftAnchor="51.0" />
+      <TableView fx:id="tableDrink" layoutX="402.0" layoutY="12.0" onMouseClicked="#clickTableDrink" prefHeight="577.0" prefWidth="385.0" stylesheets="@../../Style/table.css" AnchorPane.bottomAnchor="29.0" AnchorPane.leftAnchor="402.0" AnchorPane.rightAnchor="9.0" AnchorPane.topAnchor="12.0" />
+   </children>
+</AnchorPane>

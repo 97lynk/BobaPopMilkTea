@@ -8,8 +8,20 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="MilkTeaManagement.jar" size="2465190" download="eager" />
+    <jar href="MilkTeaManagement.jar" size="2669061" download="eager" />
+    <jar href="lib\TrayTester.jar" size="52070" download="eager" />
+    <jar href="lib\commons-beanutils-1.9.0.jar" size="230951" download="eager" />
+    <jar href="lib\commons-codec-1.5.jar" size="73098" download="eager" />
+    <jar href="lib\commons-collections-3.2.1.jar" size="575389" download="eager" />
+    <jar href="lib\commons-digester-2.1.jar" size="196768" download="eager" />
+    <jar href="lib\commons-io-2.5.jar" size="208700" download="eager" />
+    <jar href="lib\commons-logging-1.1.1.jar" size="60841" download="eager" />
+    <jar href="lib\controlsfx-8.40.14.jar" size="1215643" download="eager" />
     <jar href="lib\fontawesomefx-8.9.jar" size="571068" download="eager" />
+    <jar href="lib\groovy-all-1.7.5.jar" size="5482221" download="eager" />
+    <jar href="lib\jasperreports-6.2.0.jar" size="5300024" download="eager" />
+    <jar href="lib\jasperreports-fonts-6.2.0.jar" size="2478098" download="eager" />
+    <jar href="lib\jasperreports-javaflow-6.2.0.jar" size="5344915" download="eager" />
     <jar href="lib\jfoenix.jar" size="2386535" download="eager" />
     <jar href="lib\jooq-3.10.0.jar" size="2086337" download="eager" />
     <jar href="lib\jooq-checker-3.10.0.jar" size="10994" download="eager" />
@@ -20,6 +32,8 @@
     <jar href="lib\jooq-scala_2.11-3.10.0.jar" size="101095" download="eager" />
     <jar href="lib\jooq-scala_2.12-3.10.0.jar" size="101251" download="eager" />
     <jar href="lib\mysql-connector-java-5.1.23-bin.jar" size="834126" download="eager" />
+    <jar href="lib\poi-3.13-20150929.jar" size="2497380" download="eager" />
+    <jar href="lib\swing-layout-1.0.4.jar" size="117420" download="eager" />
   </resources>
   <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="MilkTeaManagement" >
     <param name="requiredFXVersion" value="8.0+"/>

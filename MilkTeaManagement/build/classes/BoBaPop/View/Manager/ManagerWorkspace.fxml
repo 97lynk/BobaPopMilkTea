@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="root" prefHeight="556.0" prefWidth="712.0" style="-fx-background-color: #fff; -fx-border-color: #ddd;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BoBaPop.Controller.ManagerWorkspace">
+    <children>
+      <AnchorPane prefHeight="37.0" prefWidth="716.0">
+         <children>
+            <HBox alignment="CENTER_RIGHT" layoutX="50.0" prefHeight="38.0" prefWidth="80.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <JFXButton alignment="CENTER" contentDisplay="GRAPHIC_ONLY" focusTraversable="false" graphicTextGap="0.0" onAction="#clickMinimize" prefHeight="38.0" prefWidth="38.0" style="-fx-padding: 0;">
+                     <graphic>
+                        <MaterialDesignIconView fill="GREY" glyphName="WINDOW_MINIMIZE" size="20" textAlignment="CENTER" wrappingWidth="33.0" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton alignment="CENTER" contentDisplay="GRAPHIC_ONLY" focusTraversable="false" graphicTextGap="0.0" layoutX="172.0" layoutY="10.0" onAction="#clickClose" prefHeight="38.0" prefWidth="38.0" style="-fx-padding: 0;">
+                     <graphic>
+                        <MaterialDesignIconView fill="GREY" glyphName="WINDOW_CLOSE" size="30" wrappingWidth="33.0" />
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <JFXButton contentDisplay="GRAPHIC_ONLY" onAction="#clickLogout" prefHeight="33.0" prefWidth="43.0" textFill="#2a5495">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView glyphName="ARROW_LEFT" size="30" textAlignment="CENTER" wrappingWidth="28.14285659790039" />
+               </graphic>
+            </JFXButton>
+            <Label layoutX="71.0" layoutY="4.0" prefHeight="6.0" prefWidth="208.0" text="Manager Workspace">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+        <HBox prefHeight="561.0" prefWidth="704.0" VBox.vgrow="ALWAYS">
+            <children>
+                <AnchorPane prefHeight="522.0" prefWidth="719.0" HBox.hgrow="ALWAYS">
+                    <children>
+                        <GridPane layoutX="10.0" layoutY="10.0" prefHeight="495.0" prefWidth="640.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                            <columnConstraints>
+                                <ColumnConstraints halignment="RIGHT" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="BOTTOM" vgrow="ALWAYS" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="TOP" vgrow="ALWAYS" />
+                            </rowConstraints>
+                            <children>
+                                <JFXButton alignment="CENTER" contentDisplay="TOP" graphicTextGap="0.0" onAction="#openTableManagement" prefHeight="184.0" prefWidth="217.0" text="BÀN" textAlignment="CENTER">
+                                    <graphic>
+                                        <FontAwesomeIconView fill="#424242" glyphName="TABLE" size="150" stroke="WHITE" textAlignment="CENTER" wrappingWidth="176.0" />
+                                    </graphic>
+                                    <font>
+                                        <Font size="20.0" />
+                                    </font>
+                                </JFXButton>
+                                <JFXButton contentDisplay="TOP" graphicTextGap="0.0" onAction="#openBillsManagement" prefHeight="184.0" prefWidth="217.0" text="HÓA ĐƠN" GridPane.columnIndex="1">
+                                    <graphic>
+                                        <FontAwesomeIconView fill="#424242" glyphName="LIST_ALT" size="150" stroke="WHITE" textAlignment="CENTER" wrappingWidth="176.0" />
+                                    </graphic>
+                                    <font>
+                                        <Font size="20.0" />
+                                    </font>
+                                </JFXButton>
+                                <JFXButton contentDisplay="TOP" graphicTextGap="0.0" onAction="#openStatisticStage" prefHeight="201.0" prefWidth="254.0" text="THỐNG KÊ" GridPane.columnIndex="2">
+                                    <graphic>
+                                        <FontAwesomeIconView fill="#424242" glyphName="LINE_CHART" size="150" stroke="WHITE" textAlignment="CENTER" wrappingWidth="176.0" />
+                                    </graphic>
+                                    <font>
+                                        <Font size="20.0" />
+                                    </font>
+                                </JFXButton>
+                                <JFXButton contentDisplay="TOP" graphicTextGap="0.0" onAction="#openUsersManagement" prefHeight="184.0" prefWidth="217.0" text="NGƯỜI DÙNG" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                    <graphic>
+                                        <FontAwesomeIconView fill="#424242" glyphName="USERS" size="150" stroke="WHITE" textAlignment="CENTER" wrappingWidth="176.0" />
+                                    </graphic>
+                                    <font>
+                                        <Font size="20.0" />
+                                    </font>
+                                </JFXButton>
+                                <JFXButton contentDisplay="TOP" graphicTextGap="0.0" onAction="#openDrinksManagement" prefHeight="201.0" prefWidth="254.0" text="THỨC UỐNG" GridPane.rowIndex="1">
+                                    <graphic>
+                                        <FontAwesomeIconView fill="#424242" glyphName="COFFEE" size="150" stroke="WHITE" textAlignment="CENTER" wrappingWidth="176.0" />
+                                    </graphic>
+                                    <font>
+                                        <Font size="20.0" />
+                                    </font>
+                                </JFXButton>
+                        <JFXButton contentDisplay="TOP" graphicTextGap="0.0" onAction="#openAbout" prefHeight="184.0" prefWidth="217.0" text="ỨNG DỤNG" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <graphic>
+                              <FontAwesomeIconView fill="#424242" glyphName="INFO" size="150" stroke="WHITE" textAlignment="CENTER" wrappingWidth="176.0" />
+                           </graphic>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </JFXButton>
+                            </children>
+                        </GridPane>
+                    </children>
+                </AnchorPane>
+            </children>
+        </HBox>
+    </children>
+</VBox>

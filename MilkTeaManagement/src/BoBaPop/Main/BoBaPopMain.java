@@ -1,5 +1,8 @@
 package BoBaPop.Main;
 
+import BoBaPop.DA.ConnectToMySql;
+import BoBaPop.Util.MyFunction;
+import java.net.URL;
 import javafx.application.Application;
 import static javafx.application.Application.launch;
 import javafx.fxml.FXMLLoader;
@@ -12,11 +15,11 @@ public class BoBaPopMain extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/BoBaPop/View/FXMLDocument.fxml"));
-        Scene scene = new Scene(root, root.prefWidth(-1), root.prefHeight(-1));
-//        String image = getClass().getResource("/BoBaPop/images/bg.jpg").toExternalForm();
-//        root.setStyle("-fx-background-image: url('" + image + "');"
-//                + "-fx-background-size:cover;");
+
+        Parent root = FXMLLoader.load(new URL(MyFunction.LOGIN_URI));
+        Scene scene = new Scene(root);
+        stage.setTitle(MyFunction.LOGIN_TITLE);
+        stage.getIcons().add(MyFunction.iconApp);
         stage.initStyle(StageStyle.UNDECORATED);
         stage.setScene(scene);
         stage.setResizable(false);
@@ -24,6 +27,7 @@ public class BoBaPopMain extends Application {
     }
 
     public static void main(String[] args) {
+        ConnectToMySql.initialize();
         launch(args);
     }
 }

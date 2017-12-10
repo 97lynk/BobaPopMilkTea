@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="BillReport" pageWidth="290" pageHeight="500" columnWidth="250" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="BillID" class="java.lang.Integer"/>
+	<queryString>
+		<![CDATA[SELECT
+     vw_billdetails.`BillID` AS vw_billdetails_BillID,
+     vw_billdetails.`TableID` AS vw_billdetails_TableID,
+     vw_billdetails.`OrderTime` AS vw_billdetails_OrderTime,
+     vw_billdetails.`TableName` AS vw_billdetails_TableName,
+     vw_billdetails.`GrandTotal` AS vw_billdetails_GrandTotal,
+     vw_billdetails.`IsPaid` AS vw_billdetails_IsPaid,
+     vw_billdetails.`IsStaying` AS vw_billdetails_IsStaying,
+     vw_items.`BillID` AS vw_items_BillID,
+     vw_items.`DrinkID` AS vw_items_DrinkID,
+     vw_items.`DrinkTypeID` AS vw_items_DrinkTypeID,
+     vw_items.`DrinkName` AS vw_items_DrinkName,
+     vw_items.`DrinkTypeName` AS vw_items_DrinkTypeName,
+     vw_items.`Quantity` AS vw_items_Quantity,
+     vw_items.`UnitPrice` AS vw_items_UnitPrice,
+     vw_items.`Total` AS vw_items_Total,
+     vw_items.`Image` AS vw_items_Image
+FROM
+     `vw_items` vw_items INNER JOIN `vw_billdetails` vw_billdetails ON vw_items.`BillID` = vw_billdetails.`BillID` 
+WHERE vw_billdetails.`BillID` = $P{BillID}]]>
+	</queryString>
+	<field name="vw_billdetails_BillID" class="java.lang.Integer"/>
+	<field name="vw_billdetails_TableID" class="java.lang.Integer"/>
+	<field name="vw_billdetails_OrderTime" class="java.sql.Timestamp"/>
+	<field name="vw_billdetails_TableName" class="java.lang.String"/>
+	<field name="vw_billdetails_GrandTotal" class="java.lang.Float"/>
+	<field name="vw_billdetails_IsPaid" class="java.lang.Boolean"/>
+	<field name="vw_billdetails_IsStaying" class="java.lang.Boolean"/>
+	<field name="vw_items_BillID" class="java.lang.Integer"/>
+	<field name="vw_items_DrinkID" class="java.lang.Integer"/>
+	<field name="vw_items_DrinkTypeID" class="java.lang.Integer"/>
+	<field name="vw_items_DrinkName" class="java.lang.String"/>
+	<field name="vw_items_DrinkTypeName" class="java.lang.String"/>
+	<field name="vw_items_Quantity" class="java.lang.Integer"/>
+	<field name="vw_items_UnitPrice" class="java.lang.Float"/>
+	<field name="vw_items_Total" class="java.lang.Float"/>
+	<field name="vw_items_Image" class="java.lang.Object"/>
+	<variable name="GRAND" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{vw_items_UnitPrice} * $F{vw_items_Quantity}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="95" splitType="Stretch">
+			<staticText>
+				<reportElement x="9" y="26" width="227" height="32"/>
+				<textElement textAlignment="Center">
+					<font fontName="Monospaced" size="12"/>
+				</textElement>
+				<text><![CDATA[Số 1, Đ. Võ Văn Ngân, P. Linh Chiểu, Q. Thủ Đức. TP HCM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="13" y="0" width="227" height="26"/>
+				<textElement textAlignment="Center">
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BoBaPop Milk Tea]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="48" y="74" width="135" height="18"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HÓA ĐƠN THANH TOÁN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="62" y="58" width="100" height="16"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[************************]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="44" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="41" width="268" height="1" forecolor="#999999" backcolor="#999999"/>
+			</line>
+			<textField>
+				<reportElement x="171" y="20" width="42" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="223" y="20" width="18" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="8" y="22" width="54" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Thời điểm:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="8" y="0" width="40" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Số HĐ:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="48" y="0" width="52" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{BillID}]]></textFieldExpression>
+			</textField>
+			<textField pattern="hh:mm a dd/MM/yyyy">
+				<reportElement x="62" y="22" width="102" height="19"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{vw_billdetails_OrderTime}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="217" y="20" width="6" height="20"/>
+				<textElement/>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="126" y="0" width="100" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{vw_billdetails_TableName}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="23" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="1" width="105" height="19"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[THỨC UỐNG]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="105" y="0" width="27" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[SL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="132" y="0" width="56" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ĐG]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="188" y="1" width="59" height="20"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[T.TIỀN]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="21" width="264" height="1" forecolor="#CCCCCC"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="23" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="105" height="20"/>
+				<textElement verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA[$F{vw_items_DrinkName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="105" y="0" width="27" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA[$F{vw_items_Quantity}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="188" y="0" width="59" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA[$F{vw_items_UnitPrice}*$F{vw_items_Quantity}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="132" y="0" width="56" height="20"/>
+				<textElement verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA[$F{vw_items_UnitPrice}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="22" width="264" height="1" forecolor="#CCCCCC"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="5" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="5" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="59" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="5" width="92" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[TỔNG CỘNG]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="172" y="5" width="75" height="20"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{GRAND}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="62" y="46" width="136" height="13"/>
+				<textElement/>
+				<text><![CDATA[XIN CẢM ƠN - HẸN GẶP LẠI]]></text>
+			</staticText>
+			<textField pattern="h.mm a dd/MM/yyyy">
+				<reportElement x="150" y="36" width="100" height="9"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

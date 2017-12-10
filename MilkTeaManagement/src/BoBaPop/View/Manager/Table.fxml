@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" minHeight="0.0" minWidth="0.0" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #fafafa; -fx-border-color: #ddd;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BoBaPop.Controller.Table">
+    <children>
+        <JFXTextField id="txtTableName" fx:id="txtTableName" alignment="CENTER" focusColor="WHITE" layoutX="14.0" layoutY="63.0" prefHeight="25.0" prefWidth="117.0" style="-fx-text-fill: #217346;" unFocusColor="TRANSPARENT" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </JFXTextField>
+        <JFXButton id="btnEdit" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" focusTraversable="false" layoutX="48.0" onAction="#clickEditTable" style="-fx-background-radius: 25;" text=" " AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <graphic>
+                <FontAwesomeIconView fill="#a4373a" glyphName="SAVE" mouseTransparent="true" size="30" textAlignment="CENTER" wrappingWidth="38.571428298950195" />
+            </graphic>
+        </JFXButton>
+        <JFXButton id="btnRemove" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" focusTraversable="false" layoutX="95.0" onAction="#clickDeleteTable" style="-fx-background-radius: 25;" text=" " AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <graphic>
+                <MaterialDesignIconView fill="#a4373a" glyphName="DELETE" size="30" wrappingWidth="33.0" />
+            </graphic>
+        </JFXButton>
+    </children>
+</AnchorPane>

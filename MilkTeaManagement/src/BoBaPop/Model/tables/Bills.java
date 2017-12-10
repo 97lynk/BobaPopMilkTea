@@ -4,7 +4,7 @@
 package BoBaPop.Model.tables;
 
 
-import BoBaPop.Model.Coffeemilkteamanager;
+import BoBaPop.Model.DbMilktea;
 import BoBaPop.Model.Indexes;
 import BoBaPop.Model.Keys;
 import BoBaPop.Model.tables.records.BillsRecord;
@@ -28,7 +28,7 @@ import org.jooq.impl.TableImpl;
 
 
 /**
- * InnoDB free: 6144 kB; (`CustomerID`) REFER `coffeemilkteamanager/customers`(`Cus
+ * InnoDB free: 23552 kB; (`TableID`) REFER `db_milktea/tables`(`TableID`)
  */
 @Generated(
     value = {
@@ -40,10 +40,10 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Bills extends TableImpl<BillsRecord> {
 
-    private static final long serialVersionUID = -1708306342;
+    private static final long serialVersionUID = 2114806763;
 
     /**
-     * The reference instance of <code>coffeemilkteamanager.bills</code>
+     * The reference instance of <code>db_milktea.bills</code>
      */
     public static final Bills BILLS = new Bills();
 
@@ -56,56 +56,51 @@ public class Bills extends TableImpl<BillsRecord> {
     }
 
     /**
-     * The column <code>coffeemilkteamanager.bills.BillID</code>.
+     * The column <code>db_milktea.bills.BillID</code>.
      */
     public final TableField<BillsRecord, Integer> BILLID = createField("BillID", org.jooq.impl.SQLDataType.INTEGER.nullable(false).identity(true), this, "");
 
     /**
-     * The column <code>coffeemilkteamanager.bills.CustomerID</code>.
-     */
-    public final TableField<BillsRecord, Integer> CUSTOMERID = createField("CustomerID", org.jooq.impl.SQLDataType.INTEGER, this, "");
-
-    /**
-     * The column <code>coffeemilkteamanager.bills.OrderTime</code>.
+     * The column <code>db_milktea.bills.OrderTime</code>.
      */
     public final TableField<BillsRecord, Timestamp> ORDERTIME = createField("OrderTime", org.jooq.impl.SQLDataType.TIMESTAMP, this, "");
 
     /**
-     * The column <code>coffeemilkteamanager.bills.GrandTotal</code>.
+     * The column <code>db_milktea.bills.GrandTotal</code>.
      */
     public final TableField<BillsRecord, Double> GRANDTOTAL = createField("GrandTotal", org.jooq.impl.SQLDataType.FLOAT, this, "");
 
     /**
-     * The column <code>coffeemilkteamanager.bills.IsPaid</code>.
+     * The column <code>db_milktea.bills.IsPaid</code>.
      */
     public final TableField<BillsRecord, Byte> ISPAID = createField("IsPaid", org.jooq.impl.SQLDataType.TINYINT, this, "");
 
     /**
-     * The column <code>coffeemilkteamanager.bills.IsStaying</code>.
+     * The column <code>db_milktea.bills.IsStaying</code>.
      */
     public final TableField<BillsRecord, Byte> ISSTAYING = createField("IsStaying", org.jooq.impl.SQLDataType.TINYINT, this, "");
 
     /**
-     * The column <code>coffeemilkteamanager.bills.TableID</code>.
+     * The column <code>db_milktea.bills.TableID</code>.
      */
     public final TableField<BillsRecord, Integer> TABLEID = createField("TableID", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
     /**
-     * Create a <code>coffeemilkteamanager.bills</code> table reference
+     * Create a <code>db_milktea.bills</code> table reference
      */
     public Bills() {
         this(DSL.name("bills"), null);
     }
 
     /**
-     * Create an aliased <code>coffeemilkteamanager.bills</code> table reference
+     * Create an aliased <code>db_milktea.bills</code> table reference
      */
     public Bills(String alias) {
         this(DSL.name(alias), BILLS);
     }
 
     /**
-     * Create an aliased <code>coffeemilkteamanager.bills</code> table reference
+     * Create an aliased <code>db_milktea.bills</code> table reference
      */
     public Bills(Name alias) {
         this(alias, BILLS);
@@ -116,7 +111,7 @@ public class Bills extends TableImpl<BillsRecord> {
     }
 
     private Bills(Name alias, Table<BillsRecord> aliased, Field<?>[] parameters) {
-        super(alias, null, aliased, parameters, "InnoDB free: 6144 kB; (`CustomerID`) REFER `coffeemilkteamanager/customers`(`Cus");
+        super(alias, null, aliased, parameters, "InnoDB free: 23552 kB; (`TableID`) REFER `db_milktea/tables`(`TableID`)");
     }
 
     /**
@@ -124,7 +119,7 @@ public class Bills extends TableImpl<BillsRecord> {
      */
     @Override
     public Schema getSchema() {
-        return Coffeemilkteamanager.COFFEEMILKTEAMANAGER;
+        return DbMilktea.DB_MILKTEA;
     }
 
     /**
@@ -132,7 +127,7 @@ public class Bills extends TableImpl<BillsRecord> {
      */
     @Override
     public List<Index> getIndexes() {
-        return Arrays.<Index>asList(Indexes.BILLS_CUSTOMERID, Indexes.BILLS_PRIMARY, Indexes.BILLS_TABLEID);
+        return Arrays.<Index>asList(Indexes.BILLS_PRIMARY, Indexes.BILLS_TABLEID);
     }
 
     /**

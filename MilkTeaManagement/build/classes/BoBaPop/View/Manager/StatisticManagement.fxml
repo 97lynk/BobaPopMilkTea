@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox prefHeight="628.0" prefWidth="951.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BoBaPop.Controller.StatisticManagement">
+   <children>
+      <Pane prefHeight="628.0" prefWidth="200.0" style="-fx-background-color: #d24726;" HBox.hgrow="NEVER">
+         <children>
+            <JFXButton contentDisplay="GRAPHIC_ONLY" focusTraversable="false" layoutX="21.0" layoutY="14.0" onAction="#clickBack" prefHeight="33.0" prefWidth="43.0" textFill="#2a5495">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="ARROW_LEFT" size="30" textAlignment="CENTER" wrappingWidth="28.14285659790039" />
+               </graphic>
+            </JFXButton>
+            <VBox layoutX="3.0" layoutY="86.0" prefHeight="267.0" prefWidth="185.0">
+               <children>
+                  <Label prefHeight="48.0" prefWidth="184.0" style="-fx-border-color: rgba(255,255,255,0.5); -fx-border-width: 0 0 1 0;" text="Thức uống" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <JFXButton alignment="BASELINE_LEFT" contentDisplay="TEXT_ONLY" focusTraversable="false" onAction="#clickRevenueDrink" prefHeight="45.0" prefWidth="185.0" style="-fx-background-radius: 0;" text="Danh thu" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="30.0" />
+                     </padding>
+                  </JFXButton>
+                  <JFXButton alignment="BASELINE_LEFT" contentDisplay="TEXT_ONLY" focusTraversable="false" onAction="#clickQuantityDrink" prefHeight="45.0" prefWidth="185.0" style="-fx-background-radius: 0;" text="Số lượng" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="30.0" />
+                     </padding>
+                  </JFXButton>
+                  <Label prefHeight="48.0" prefWidth="184.0" style="-fx-border-color: rgba(255,255,255,0.5); -fx-border-width: 0 0 1 0;" text="Thức nhóm uống" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <JFXButton alignment="BASELINE_LEFT" contentDisplay="TEXT_ONLY" focusTraversable="false" onAction="#clickRevenueType" prefHeight="45.0" prefWidth="185.0" style="-fx-background-radius: 0;" text="Danh thu" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="30.0" />
+                     </padding>
+                  </JFXButton>
+                  <JFXButton alignment="BASELINE_LEFT" contentDisplay="TEXT_ONLY" focusTraversable="false" onAction="#clickQuantityType" prefHeight="45.0" prefWidth="185.0" style="-fx-background-radius: 0;" text="Số lượng" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="30.0" />
+                     </padding>
+                  </JFXButton>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+      <VBox style="-fx-background-color: white;" HBox.hgrow="ALWAYS">
+         <children>
+            <HBox VBox.vgrow="NEVER">
+               <children>
+                  <AnchorPane prefHeight="81.0" prefWidth="759.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label fx:id="txtStatistic" layoutX="38.0" layoutY="30.0" text="Thống kê thức uống">
+                           <font>
+                              <Font size="40.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="36.0" prefWidth="79.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <JFXButton alignment="CENTER" contentDisplay="GRAPHIC_ONLY" focusTraversable="false" graphicTextGap="0.0" onAction="#clickMinimize" prefHeight="38.0" prefWidth="38.0" style="-fx-padding: 0;">
+                                 <graphic>
+                                    <MaterialDesignIconView fill="GREY" glyphName="WINDOW_MINIMIZE" size="20" textAlignment="CENTER" wrappingWidth="33.0" />
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton alignment="CENTER" contentDisplay="GRAPHIC_ONLY" focusTraversable="false" graphicTextGap="0.0" layoutX="172.0" layoutY="10.0" onAction="#clickClose" prefHeight="38.0" prefWidth="38.0" style="-fx-padding: 0;">
+                                 <graphic>
+                                    <MaterialDesignIconView fill="GREY" glyphName="WINDOW_CLOSE" size="30" wrappingWidth="33.0" />
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="19.0" prefWidth="767.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Label fx:id="txtBy" alignment="BASELINE_RIGHT" prefHeight="36.0" prefWidth="238.0" text="Số lượng trong">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <JFXButton contentDisplay="GRAPHIC_ONLY" focusTraversable="false" graphicTextGap="0.0" onAction="#clickPre" prefHeight="33.0" prefWidth="27.0" style="-fx-background-color: #fafafa; -fx-border-color: #ddd; -fx-background-insets: 1;" textFill="#d24726">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <FontAwesomeIconView fill="#d24726" glyphName="CHEVRON_LEFT" size="20" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXDatePicker fx:id="fromDate" defaultColor="#d24726" editable="false" focusTraversable="false" prefHeight="25.0" prefWidth="112.0" />
+                  <Label fx:id="txtDay" alignment="CENTER" contentDisplay="BOTTOM" prefHeight="33.0" prefWidth="79.0">
+                     <graphic>
+                        <FontAwesomeIconView fill="#d24726" glyphName="ARROWS_H" size="20" textAlignment="CENTER" wrappingWidth="46.0" />
+                     </graphic>
+                  </Label>
+                  <JFXDatePicker fx:id="toDate" defaultColor="#d24726" editable="false" focusTraversable="false" prefHeight="25.0" prefWidth="122.0" />
+                  <JFXButton contentDisplay="GRAPHIC_ONLY" focusTraversable="false" onAction="#clickNext" prefHeight="33.0" prefWidth="26.0" style="-fx-background-color: #fafafa; -fx-background-insets: 1; -fx-border-color: #ddd;" textFill="#d24726">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <FontAwesomeIconView fill="#d24726" glyphName="CHEVRON_RIGHT" size="20" />
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="504.0" prefWidth="767.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <AnchorPane prefHeight="504.0" prefWidth="202.0" HBox.hgrow="NEVER">
+                     <children>
+                        <JFXButton alignment="BASELINE_LEFT" focusTraversable="false" layoutX="15.0" layoutY="23.0" onAction="#buildChart" prefHeight="40.0" prefWidth="190.0" style="-fx-background-color: white; -fx-background-insets: 1; -fx-border-color: #ddd;" text=" Vẽ biểu đồ" textFill="#444444" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fx:id="iconChart" fill="#d24726" glyphName="PIE_CHART" size="30" />
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton alignment="BASELINE_LEFT" focusTraversable="false" layoutX="15.0" layoutY="81.0" onAction="#viewChartData" prefHeight="40.0" prefWidth="190.0" style="-fx-background-color: white; -fx-background-insets: 1; -fx-border-color: #ddd;" text=" Xem dữ liệu" textFill="#444444" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="#d24726" glyphName="TABLE" size="30" />
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton alignment="BASELINE_LEFT" focusTraversable="false" layoutX="15.0" layoutY="140.0" onAction="#saveChartAsPng" prefHeight="40.0" prefWidth="190.0" style="-fx-background-color: white; -fx-background-insets: 1; -fx-border-color: #ddd;" text=" Lưu ảnh" textFill="#444444" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="#d24726" glyphName="IMAGE" size="30" />
+                           </graphic>
+                        </JFXButton>
+                        <TableView fx:id="tableData" layoutX="10.0" layoutY="193.0" prefHeight="303.0" prefWidth="185.0" stylesheets="@../../Style/tabledata.css" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="200.0" />
+                     </children>
+                  </AnchorPane>
+                  <Separator orientation="VERTICAL" prefHeight="200.0" />
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <LineChart fx:id="lineChart" prefHeight="504.0" prefWidth="41.0" style="-fx-background-color: white;" title="LineChart Title" visible="false" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                           <xAxis>
+                              <CategoryAxis label="Thời gian" side="BOTTOM" />
+                           </xAxis>
+                           <yAxis>
+                              <NumberAxis side="LEFT" />
+                           </yAxis>
+                        </LineChart>
+                        <PieChart fx:id="pieChart" prefHeight="463.0" prefWidth="546.0" title="PieChart Title" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</HBox>

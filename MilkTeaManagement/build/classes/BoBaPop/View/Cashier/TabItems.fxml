@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane id="sliptPane" dividerPositions="0.2673992673992674" prefHeight="590.0" prefWidth="1229.0" style="-fx-background-color: white;" stylesheets="@../../Style/splitpane.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BoBaPop.Controller.TabItems">
+    <items>
+      <VBox prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <HBox prefHeight="49.0" prefWidth="402.0">
+               <children>
+                  <JFXButton mnemonicParsing="false" onAction="#clickAddItem" prefHeight="39.0" prefWidth="75.0" style="-fx-background-insets: 1; -fx-background-color: white; -fx-border-color: #ddd; -fx-text-fill: #2B579A;" text="Thêm" textFill="WHITE" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" top="5.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton mnemonicParsing="false" onAction="#clickEditItem" prefHeight="39.0" prefWidth="71.0" style="-fx-background-insets: 1; -fx-background-color: white; -fx-border-color: #ddd; -fx-text-fill: #2B579A;" text="Sửa" textFill="WHITE" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" top="5.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton mnemonicParsing="false" onAction="#clickRemoveItem" prefHeight="39.0" prefWidth="64.0" style="-fx-background-insets: 1; -fx-background-color: white; -fx-border-color: #ddd; -fx-text-fill: #2B579A;" text="Xóa" textFill="WHITE" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" top="5.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton alignment="CENTER" layoutX="215.0" layoutY="10.0" mnemonicParsing="false" onAction="#clickRefresh" prefHeight="39.0" prefWidth="90.0" style="-fx-background-insets: 1; -fx-background-color: white; -fx-border-color: #ddd; -fx-text-fill: #2B579A;" text="Làm mới" textAlignment="CENTER" textFill="WHITE" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" top="5.0" />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+            </HBox>
+                <AnchorPane id="leftListItemsPane" maxWidth="400.0" minHeight="150.0" prefHeight="541.0" prefWidth="328.0" VBox.vgrow="ALWAYS">
+                    <children>
+                        <ImageView fx:id="imgDrink" fitHeight="300.0" fitWidth="300.0" layoutX="15.0" layoutY="262.0" pickOnBounds="true" preserveRatio="true" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" AnchorPane.bottomAnchor="26.0" AnchorPane.leftAnchor="15.0" />
+                        <Separator layoutX="21.0" layoutY="33.0" prefHeight="4.0" prefWidth="100.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" />
+                        <Label layoutX="28.0" layoutY="23.0" prefHeight="17.0" prefWidth="121.0" style="-fx-background-color: white;" text="Thông Tin Thức Uống" AnchorPane.leftAnchor="25.0" />
+                        <JFXButton fx:id="btnSave" disable="true" layoutX="184.0" layoutY="183.0" onAction="#clickSave" prefHeight="39.0" prefWidth="58.0" style="-fx-background-color: #fafafa; -fx-background-radius: 0; -fx-background-insets: 1; -fx-border-color: #ddd;" text="Lưu" AnchorPane.rightAnchor="80.0">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnCancel" disable="true" graphicTextGap="0.0" layoutX="172.0" layoutY="183.0" onAction="#clickCancel" prefHeight="39.0" prefWidth="58.0" style="-fx-background-color: #fafafa; -fx-background-radius: 0; -fx-background-insets: 1; -fx-border-color: #ddd;" text="Hủy" AnchorPane.rightAnchor="10.0">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </JFXButton>
+                  <HBox alignment="CENTER_LEFT" layoutX="11.0" layoutY="49.0" prefHeight="50.0" prefWidth="300.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+                     <children>
+                              <JFXComboBox fx:id="cbxDrink" labelFloat="true" prefHeight="25.0" prefWidth="200.0" promptText="Tên" HBox.hgrow="ALWAYS" />
+                        <Label prefHeight="23.0" prefWidth="21.0" HBox.hgrow="NEVER">
+                           <graphic>
+                              <FontAwesomeIconView glyphName="CHEVRON_RIGHT" size="15" />
+                           </graphic>
+                           <HBox.margin>
+                              <Insets left="2.0" right="2.0" />
+                           </HBox.margin>
+                        </Label>
+                              <JFXComboBox fx:id="cbxDrinkType" labelFloat="true" prefHeight="25.0" prefWidth="200.0" promptText="Loại" visibleRowCount="100" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </JFXComboBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="8.0" layoutY="122.0" prefHeight="50.0" prefWidth="300.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+                     <children>
+                              <JFXTextField fx:id="txtPrice" labelFloat="true" prefHeight="25.0" prefWidth="81.0" promptText="Giá tiền" HBox.hgrow="ALWAYS" />
+                        <Label>
+                           <HBox.margin>
+                              <Insets left="5.0" right="5.0" />
+                           </HBox.margin>
+                           <graphic>
+                              <FontAwesomeIconView glyphName="CLOSE" />
+                           </graphic>
+                        </Label>
+                              <JFXTextField fx:id="txtAmount" labelFloat="true" prefHeight="25.0" prefWidth="43.0" promptText="Số lượng" HBox.hgrow="ALWAYS" />
+                        <Label text="=">
+                           <HBox.margin>
+                              <Insets left="5.0" right="5.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                              <JFXTextField fx:id="txtTotal" disable="true" labelFloat="true" prefHeight="25.0" prefWidth="134.0" promptText="Thành tiền" HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+                    </children>
+                </AnchorPane>
+         </children>
+      </VBox>
+      <VBox prefHeight="200.0" prefWidth="100.0">
+         <children>
+                <TableView id="tableItem" fx:id="tableItem" onMouseClicked="#clickTableItems" prefHeight="568.0" prefWidth="893.0" stylesheets="@../../Style/table.css" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin></TableView>
+         </children>
+      </VBox>
+    </items>
+</SplitPane>

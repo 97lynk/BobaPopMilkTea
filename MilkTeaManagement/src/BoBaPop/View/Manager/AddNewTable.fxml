@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BoBaPop.Controller.AddNewTable">
+    <children>
+        <AnchorPane fx:id="addTablePane" layoutX="5.0" minHeight="0.0" minWidth="0.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <JFXTextField id="txtTableName" fx:id="txtTableName" layoutX="9.0" layoutY="44.0" minWidth="0.0" prefHeight="33.0" prefWidth="132.0" style="-fx-text-fill: teal;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </JFXTextField>
+                <JFXButton id="btnClose" alignment="CENTER" layoutX="105.0" layoutY="13.0" minWidth="0.0" onAction="#clickClose" prefHeight="50.0" prefWidth="50.0" style="-fx-background-radius: 25;" text=" " textFill="#f8f3f3" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <font>
+                        <Font name="System Bold" />
+                    </font>
+                    <graphic>
+                        <FontAwesomeIconView fill="TEAL" glyphName="ARROW_RIGHT" size="30" wrappingWidth="25.714285850524902" />
+                    </graphic>
+                    <padding>
+                        <Insets left="10.0" />
+                    </padding>
+                </JFXButton>
+            </children>
+        </AnchorPane>
+        <JFXButton fx:id="btnAddTable" alignment="CENTER" contentDisplay="CENTER" minHeight="0.0" minWidth="0.0" onAction="#clickAdd" text=" " textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <font>
+                <Font name="System Bold" />
+            </font>
+            <graphic>
+                <FontAwesomeIconView fill="TEAL" glyphName="PLUS" size="50" />
+            </graphic>
+        </JFXButton>
+    </children>
+</AnchorPane>

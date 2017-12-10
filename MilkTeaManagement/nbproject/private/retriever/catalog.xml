@@ -2,4 +2,5 @@
 <catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
     <system systemId="http://javafx.com/javafx/8.0.141" uri="www.oracle.com/technetwork/java/javase/overview/index.html"/>
     <system systemId="http://www.jooq.org/xsd/jooq-codegen-3.6.0.xsd" uri="www.jooq.org/xsd/jooq-codegen-3.6.0.xsd"/>
+    <system systemId="http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" uri="jasperreports.sourceforge.net/xsd/jasperreport.xsd"/>
 </catalog>

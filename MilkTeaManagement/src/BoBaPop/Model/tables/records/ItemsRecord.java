@@ -16,8 +16,7 @@ import org.jooq.impl.UpdatableRecordImpl;
 
 
 /**
- * InnoDB free: 6144 kB; (`BillID`) REFER `coffeemilkteamanager/bills`(`BillID`); 
- * (
+ * InnoDB free: 23552 kB; (`BillID`) REFER `db_milktea/bills`(`BillID`); (`DrinkID`
  */
 @Generated(
     value = {
@@ -29,59 +28,59 @@ import org.jooq.impl.UpdatableRecordImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class ItemsRecord extends UpdatableRecordImpl<ItemsRecord> implements Record4<Integer, Integer, Integer, Double> {
 
-    private static final long serialVersionUID = 298143008;
+    private static final long serialVersionUID = 1244976277;
 
     /**
-     * Setter for <code>coffeemilkteamanager.items.BillID</code>.
+     * Setter for <code>db_milktea.items.BillID</code>.
      */
     public void setBillid(Integer value) {
         set(0, value);
     }
 
     /**
-     * Getter for <code>coffeemilkteamanager.items.BillID</code>.
+     * Getter for <code>db_milktea.items.BillID</code>.
      */
     public Integer getBillid() {
         return (Integer) get(0);
     }
 
     /**
-     * Setter for <code>coffeemilkteamanager.items.DrinkID</code>.
+     * Setter for <code>db_milktea.items.DrinkID</code>.
      */
     public void setDrinkid(Integer value) {
         set(1, value);
     }
 
     /**
-     * Getter for <code>coffeemilkteamanager.items.DrinkID</code>.
+     * Getter for <code>db_milktea.items.DrinkID</code>.
      */
     public Integer getDrinkid() {
         return (Integer) get(1);
     }
 
     /**
-     * Setter for <code>coffeemilkteamanager.items.Quantity</code>.
+     * Setter for <code>db_milktea.items.Quantity</code>.
      */
     public void setQuantity(Integer value) {
         set(2, value);
     }
 
     /**
-     * Getter for <code>coffeemilkteamanager.items.Quantity</code>.
+     * Getter for <code>db_milktea.items.Quantity</code>.
      */
     public Integer getQuantity() {
         return (Integer) get(2);
     }
 
     /**
-     * Setter for <code>coffeemilkteamanager.items.Total</code>.
+     * Setter for <code>db_milktea.items.Total</code>.
      */
     public void setTotal(Double value) {
         set(3, value);
     }
 
     /**
-     * Getter for <code>coffeemilkteamanager.items.Total</code>.
+     * Getter for <code>db_milktea.items.Total</code>.
      */
     public Double getTotal() {
         return (Double) get(3);

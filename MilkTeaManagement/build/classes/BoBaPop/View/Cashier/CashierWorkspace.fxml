@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="670.0" prefWidth="1107.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BoBaPop.Controller.CashierWorkspace">
+    <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+         <children>
+            <ImageView fitHeight="48.0" fitWidth="498.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="1.0">
+               <image>
+                  <Image url="@../../images/underwater_bg.PNG" />
+               </image>
+            </ImageView>
+                <JFXTabPane fx:id="myTab" prefHeight="627.0" prefWidth="1106.0" style="-fx-background-color: transparent;" stylesheets="@../../Style/tab.css" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="2.0">
+                    <tabs>
+                        <Tab fx:id="tableTab" style="-fx-background-color: transparent;" text="Bàn">
+                            <content>
+                                <AnchorPane style="-fx-background-color: white; -fx-border-color: #ddd;">
+                                    <children>
+                                        <HBox layoutX="12.0" layoutY="96.0" prefHeight="539.0" prefWidth="693.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="85.0">
+                                            <children>
+                                                <AnchorPane fx:id="paneBackGround" prefHeight="507.0" prefWidth="742.0" stylesheets="@../../Style/tab.css" HBox.hgrow="ALWAYS">
+                                                    <children>
+                                                        <GridPane fx:id="paneMap" hgap="2.0" layoutY="10.0" prefHeight="494.0" prefWidth="722.0" vgap="2.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="10.0">
+                                                            <columnConstraints>
+                                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                            </columnConstraints>
+                                                            <rowConstraints>
+                                                                <RowConstraints fillHeight="false" maxHeight="191.0" minHeight="10.0" prefHeight="188.0" vgrow="SOMETIMES" />
+                                                            </rowConstraints>
+                                                            <opaqueInsets>
+                                                                <Insets />
+                                                            </opaqueInsets>
+                                                        </GridPane>
+                                                    </children>
+                                                </AnchorPane>
+                                                <AnchorPane fx:id="paneInfoBill" disable="true" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="494.0" prefWidth="333.0" HBox.hgrow="ALWAYS">
+                                                    <children>
+                                                        <Label fx:id="lblBillID" alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" layoutX="14.0" layoutY="54.0" prefHeight="35.0" prefWidth="318.0" textFill="#2b579a">
+                                                            <font>
+                                                                <Font name="System Bold" size="20.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label focusTraversable="false" layoutX="19.0" layoutY="115.0" text="Thời gian" />
+                                                        <JFXTimePicker fx:id="tpkTimeOrder" defaultColor="#2b579a" layoutX="92.0" layoutY="110.0" prefHeight="26.0" prefWidth="245.0" />
+                                                        <JFXDatePicker fx:id="dpkDateOrder" defaultColor="#2b579a" layoutX="92.0" layoutY="185.0" prefHeight="25.0" prefWidth="246.0" />
+                                                        <Label focusTraversable="false" layoutX="19.0" layoutY="257.0" text="Bàn" />
+                                                        <JFXComboBox id="cbxTable" fx:id="cbxTable" focusColor="#2b579a" layoutX="93.0" layoutY="253.0" prefHeight="25.0" prefWidth="214.0" />
+                                                        <Label fx:id="txtValidTable" layoutX="97.0" layoutY="295.0" prefHeight="21.0" prefWidth="205.0" textFill="#ff0505" />
+                                                        <JFXCheckBox fx:id="chkStaying" layoutX="86.0" layoutY="322.0" text="Đang ngồi" />
+                                                        <JFXCheckBox fx:id="chkPaid" layoutX="197.0" layoutY="322.0" text="Đã thanh toán" />
+                                                        <JFXButton fx:id="btnSave" layoutX="195.0" layoutY="357.0" onAction="#clickSaveBill" prefHeight="37.0" prefWidth="65.0" style="-fx-background-color: #fafafa; -fx-background-radius: 0; -fx-background-insets: 1; -fx-border-color: #ddd;" text="Lưu">
+                                                            <font>
+                                                                <Font size="16.0" />
+                                                            </font>
+                                                        </JFXButton>
+                                                        <JFXButton layoutX="269.0" layoutY="357.0" onAction="#clickCancelBill" prefHeight="39.0" prefWidth="83.0" style="-fx-background-color: #fafafa; -fx-background-radius: 0; -fx-background-insets: 1; -fx-border-color: #ddd;" text="Hủy">
+                                                            <font>
+                                                                <Font size="16.0" />
+                                                            </font>
+                                                        </JFXButton>
+                                                    </children>
+                                                </AnchorPane>
+                                            </children>
+                                        </HBox>
+                                        <Separator layoutX="14.0" layoutY="65.0" prefHeight="4.0" prefWidth="100.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="80.0" />
+                                        <HBox layoutX="28.0" layoutY="12.0" maxHeight="80.0" minHeight="80.0" prefHeight="80.0" prefWidth="1062.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="0.0">
+                                            <children>
+                                        <JFXButton contentDisplay="TOP" focusTraversable="false" minWidth="44.0" onAction="#clickLogout" prefHeight="64.0" prefWidth="72.0" style="-fx-background-color: white;" text="Đăng xuất" textFill="#000000b2" HBox.hgrow="NEVER">
+                                            <graphic>
+                                                <MaterialDesignIconView fill="#2b579a" glyphName="LOGOUT" rotate="180.0" size="25" textAlignment="CENTER" wrappingWidth="39.0" />
+                                            </graphic>
+                                       <HBox.margin>
+                                          <Insets top="5.0" />
+                                       </HBox.margin>
+                                        </JFXButton>
+                                    <Separator orientation="VERTICAL" prefHeight="53.0" prefWidth="6.0" />
+                                                <VBox prefHeight="73.0" prefWidth="224.0">
+                                                    <children>
+                                                        <HBox prefHeight="62.0" prefWidth="216.0">
+                                                            <children>
+                                                                <JFXButton fx:id="btnAdd" contentDisplay="TOP" disable="true" graphicTextGap="2.0" onAction="#clickAddButton" prefHeight="64.0" prefWidth="64.0" style="-fx-background-color: white; -fx-background-radius: 0;" text="Thêm" textAlignment="CENTER" textFill="#000000b2">
+                                                                    <graphic>
+                                                                        <MaterialDesignIconView fill="#11c681" glyphName="NOTE_PLUS" size="30" textAlignment="CENTER" wrappingWidth="43.911458015441895" />
+                                                                    </graphic>
+                                                                    <HBox.margin>
+                                                                        <Insets right="10.0" />
+                                                                    </HBox.margin>
+                                                                </JFXButton>
+                                                                <JFXButton fx:id="btnModify" contentDisplay="TOP" disable="true" onAction="#clickModifyButton" prefHeight="64.0" prefWidth="64.0" style="-fx-background-color: white; -fx-background-radius: 0;" text="Sửa" textAlignment="CENTER" textFill="#000000b2">
+                                                             
+                                                                    <graphic>
+                                                                        <MaterialDesignIconView fill="ORANGE" glyphName="PENCIL" size="30" />
+                                                                    </graphic>
+                                                                    <HBox.margin>
+                                                                        <Insets right="10.0" />
+                                                                    </HBox.margin>
+                                                                </JFXButton>
+                                                                <JFXButton fx:id="btnDelete" contentDisplay="TOP" disable="true" onAction="#clickDeleteButton" prefHeight="64.0" prefWidth="64.0" style="-fx-background-color: white; -fx-background-radius: 0;" text="Xóa" textAlignment="CENTER" textFill="#000000b2">
+                                                                 
+                                                                    <graphic>
+                                                                        <MaterialDesignIconView glyphName="DELETE" size="30" />
+                                                                    </graphic>
+                                                                    <HBox.margin>
+                                                                        <Insets right="10.0" />
+                                                                    </HBox.margin>
+                                                                </JFXButton>
+                                                            </children>
+                                                            <VBox.margin>
+                                                                <Insets left="2.0" right="2.0" top="5.0" />
+                                                            </VBox.margin>
+                                                        </HBox>
+                                                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="229.0" style="-fx-font-size: 12px;" text="Thao tác trên hóa đơn" textAlignment="CENTER" />
+                                                    </children>
+                                                </VBox>
+                                                <Separator orientation="VERTICAL" prefHeight="53.0" prefWidth="6.0">
+                                                    <HBox.margin>
+                                                        <Insets bottom="2.0" top="2.0" />
+                                                    </HBox.margin>
+                                                </Separator>
+                                    <JFXButton contentDisplay="TOP" onAction="#clickTakeAwayButton" prefHeight="64.0" prefWidth="93.0" style="-fx-background-color: white; -fx-background-radius: 0;" text="Mua về" textAlignment="CENTER" textFill="#000000b2">
+                                       <graphic>
+                                          <MaterialDesignIconView fill="#0abf0a" glyphName="CASH_USD" size="30" />
+                                       </graphic>
+                                       <HBox.margin>
+                                          <Insets top="5.0" />
+                                       </HBox.margin>
+                                    </JFXButton>
+                                    <JFXButton fx:id="btnPay" contentDisplay="TOP" layoutX="240.0" layoutY="15.0" onAction="#clickPayButton" prefHeight="64.0" prefWidth="93.0" style="-fx-background-color: white; -fx-background-radius: 0;" text="Thanh toán" textAlignment="CENTER" textFill="#000000b2">
+                                       <graphic>
+                                          <MaterialDesignIconView fill="GREEN" glyphName="CASH_USD" size="30" />
+                                       </graphic>
+                                       <HBox.margin>
+                                          <Insets top="5.0" />
+                                       </HBox.margin>
+                                    </JFXButton>
+                                                <Separator orientation="VERTICAL" prefHeight="53.0" prefWidth="6.0" />
+                                                <JFXButton id="btnReload" contentDisplay="TOP" onAction="#clickReloadData" prefHeight="64.0" prefWidth="64.0" style="-fx-background-color: white; -fx-background-radius: 0;" text="Tải Lại" textAlignment="CENTER" textFill="#000000b2">
+                                                    <graphic>
+                                                        <MaterialDesignIconView fill="#4093eb" glyphName="REFRESH" size="30" />
+                                                    </graphic>
+                                       <HBox.margin>
+                                          <Insets top="5.0" />
+                                       </HBox.margin>
+                                                </JFXButton>
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                    <padding>
+                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                    </padding>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                        <Tab fx:id="itemsTab" text="Thức uống">
+                            <content>
+                                <AnchorPane fx:id="listItemsPane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: #ddd;">
+                                    <children>
+                                        <fx:include source="TabItems.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                    </children>
+                                    <padding>
+                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                    </padding>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                        <Tab text="Hôm nay">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="509.0" prefWidth="990.0" style="-fx-background-color: white; -fx-border-color: #ddd;">
+                                    <children>
+                                        <TableView fx:id="tableBill" layoutX="5.0" layoutY="7.0" prefHeight="580.0" prefWidth="1107.0" style="-fx-border-color: #ddd; -fx-border-radius: 4px;" stylesheets="@../../Style/table.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <styleClass>
+                                                <String fx:value="column-header" />
+                                                <String fx:value="filler" />
+                                                <String fx:value="table-row-cell" />
+                                                <String fx:value="table-view" />
+                                            </styleClass>
+                                        </TableView>
+                                    </children>
+                                    <padding>
+                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                    </padding>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                    </tabs>
+                </JFXTabPane>
+         </children>
+      </AnchorPane>
+    </children>
+</VBox>

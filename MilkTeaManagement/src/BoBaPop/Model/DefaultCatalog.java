@@ -27,7 +27,7 @@ import org.jooq.impl.CatalogImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class DefaultCatalog extends CatalogImpl {
 
-    private static final long serialVersionUID = -384318276;
+    private static final long serialVersionUID = -1843863135;
 
     /**
      * The reference instance of <code></code>
@@ -35,9 +35,9 @@ public class DefaultCatalog extends CatalogImpl {
     public static final DefaultCatalog DEFAULT_CATALOG = new DefaultCatalog();
 
     /**
-     * The schema <code>coffeemilkteamanager</code>.
+     * The schema <code>db_milktea</code>.
      */
-    public final Coffeemilkteamanager COFFEEMILKTEAMANAGER = BoBaPop.Model.Coffeemilkteamanager.COFFEEMILKTEAMANAGER;
+    public final DbMilktea DB_MILKTEA = BoBaPop.Model.DbMilktea.DB_MILKTEA;
 
     /**
      * No further instances allowed
@@ -55,6 +55,6 @@ public class DefaultCatalog extends CatalogImpl {
 
     private final List<Schema> getSchemas0() {
         return Arrays.<Schema>asList(
-            Coffeemilkteamanager.COFFEEMILKTEAMANAGER);
+            DbMilktea.DB_MILKTEA);
     }
 }

@@ -16,7 +16,7 @@ import org.jooq.impl.UpdatableRecordImpl;
 
 
 /**
- * InnoDB free: 6144 kB
+ * InnoDB free: 23552 kB
  */
 @Generated(
     value = {
@@ -28,31 +28,31 @@ import org.jooq.impl.UpdatableRecordImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class DrinktypesRecord extends UpdatableRecordImpl<DrinktypesRecord> implements Record2<Integer, String> {
 
-    private static final long serialVersionUID = 2136004752;
+    private static final long serialVersionUID = 961475040;
 
     /**
-     * Setter for <code>coffeemilkteamanager.drinktypes.DrinkTypeID</code>.
+     * Setter for <code>db_milktea.drinktypes.DrinkTypeID</code>.
      */
     public void setDrinktypeid(Integer value) {
         set(0, value);
     }
 
     /**
-     * Getter for <code>coffeemilkteamanager.drinktypes.DrinkTypeID</code>.
+     * Getter for <code>db_milktea.drinktypes.DrinkTypeID</code>.
      */
     public Integer getDrinktypeid() {
         return (Integer) get(0);
     }
 
     /**
-     * Setter for <code>coffeemilkteamanager.drinktypes.DrinkTypeName</code>.
+     * Setter for <code>db_milktea.drinktypes.DrinkTypeName</code>.
      */
     public void setDrinktypename(String value) {
         set(1, value);
     }
 
     /**
-     * Getter for <code>coffeemilkteamanager.drinktypes.DrinkTypeName</code>.
+     * Getter for <code>db_milktea.drinktypes.DrinkTypeName</code>.
      */
     public String getDrinktypename() {
         return (String) get(1);

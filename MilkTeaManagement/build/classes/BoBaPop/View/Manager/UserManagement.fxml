@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="578.0" prefWidth="769.0" style="-fx-background-color: white; -fx-border-color: #2B579A;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BoBaPop.Controller.UserManagementController">
+    <children>
+        <Pane fx:id="paneTool" prefHeight="572.0" prefWidth="182.0" style="-fx-background-color: #2B579A;" HBox.hgrow="NEVER">
+            <children>
+                <JFXButton alignment="TOP_CENTER" contentDisplay="GRAPHIC_ONLY" focusTraversable="false" graphicTextGap="0.0" layoutX="58.0" layoutY="70.0" onAction="#clickPrevious" prefHeight="50.0" prefWidth="50.0">
+                    <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="CHEVRON_UP" size="32" textAlignment="CENTER" wrappingWidth="42.0" />
+                    </graphic>
+                </JFXButton>
+                <JFXButton alignment="TOP_CENTER" contentDisplay="GRAPHIC_ONLY" focusTraversable="false" graphicTextGap="0.0" layoutX="58.0" layoutY="420.0" onAction="#clickNext" prefHeight="50.0" prefWidth="50.0">
+                    <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="CHEVRON_DOWN" size="32" textAlignment="CENTER" wrappingWidth="42.0" />
+                    </graphic>
+                </JFXButton>
+                <VBox layoutX="11.0" layoutY="177.0" prefHeight="201.0" prefWidth="161.0">
+                    <children>
+                        <Label fx:id="txtUserID" alignment="CENTER" contentDisplay="TEXT_ONLY" prefHeight="66.0" prefWidth="161.0" text="..." textAlignment="CENTER" textFill="WHITE">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Label>
+                        <Label prefHeight="59.0" prefWidth="160.0" />
+                        <JFXButton alignment="TOP_LEFT" contentDisplay="TEXT_ONLY" onAction="#clickAdd" prefHeight="44.0" prefWidth="161.0" style="-fx-background-color: transparent; -fx-background-radius: 0;" text="Thêm người dùng " textFill="WHITE" VBox.vgrow="ALWAYS">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </JFXButton>
+                        <JFXButton alignment="TOP_LEFT" contentDisplay="TEXT_ONLY" onAction="#clickModify" prefHeight="44.0" prefWidth="162.0" style="-fx-background-color: transparent; -fx-background-radius: 0;" text="Sửa thông tin" textFill="WHITE" VBox.vgrow="ALWAYS">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </JFXButton>
+                        <JFXButton alignment="TOP_LEFT" contentDisplay="TEXT_ONLY" onAction="#clickChangePass" prefHeight="44.0" prefWidth="160.0" style="-fx-background-color: transparent; -fx-background-radius: 0;" text="Đổi mật khẩu" textFill="WHITE" VBox.vgrow="ALWAYS">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </JFXButton>
+                        <JFXButton alignment="TOP_LEFT" contentDisplay="TEXT_ONLY" onAction="#clickDelete" prefHeight="44.0" prefWidth="163.0" style="-fx-background-color: transparent; -fx-background-radius: 0;" text="Xóa người dùng" textFill="WHITE">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </JFXButton>
+                  <JFXButton alignment="BASELINE_LEFT" contentDisplay="TEXT_ONLY" onAction="#clickLogout" prefHeight="39.0" prefWidth="173.0" text="Đăng xuất" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </JFXButton>
+                    </children>
+                </VBox>
+            <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="13.0" layoutY="10.0" onAction="#clickBack" prefHeight="33.0" prefWidth="43.0" textFill="#2a5495">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="ARROW_LEFT" size="30" textAlignment="CENTER" wrappingWidth="28.14285659790039" />
+               </graphic>
+            </JFXButton>
+            </children>
+        </Pane>
+        <AnchorPane prefHeight="571.0" prefWidth="584.0" HBox.hgrow="ALWAYS">
+            <children>
+                <HBox alignment="CENTER_RIGHT" layoutX="321.0" layoutY="50.0" prefHeight="38.0" prefWidth="80.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <JFXButton alignment="CENTER" contentDisplay="GRAPHIC_ONLY" focusTraversable="false" graphicTextGap="0.0" onAction="#clickMinimize" prefHeight="38.0" prefWidth="38.0" style="-fx-padding: 0;">
+                            <graphic>
+                                <MaterialDesignIconView fill="GREY" glyphName="WINDOW_MINIMIZE" size="20" textAlignment="CENTER" wrappingWidth="33.0" />
+                            </graphic>
+                        </JFXButton>
+                        <JFXButton alignment="CENTER" contentDisplay="GRAPHIC_ONLY" focusTraversable="false" graphicTextGap="0.0" layoutX="172.0" layoutY="10.0" onAction="#clickClose" prefHeight="38.0" prefWidth="38.0" style="-fx-padding: 0;">
+                            <graphic>
+                                <MaterialDesignIconView fill="GREY" glyphName="WINDOW_CLOSE" size="30" wrappingWidth="33.0" />
+                            </graphic>
+                        </JFXButton>
+                    </children>
+                </HBox>
+                <Label layoutX="21.0" layoutY="19.0" text="Người dùng" textFill="#424242d5">
+                    <font>
+                        <Font size="40.0" />
+                    </font>
+                </Label>
+                <VBox layoutX="19.0" layoutY="70.0" prefHeight="215.0" prefWidth="208.0">
+                    <children>
+                        <ImageView fx:id="imgAvatar" fitHeight="183.0" fitWidth="225.0" pickOnBounds="true" VBox.vgrow="ALWAYS" />
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                            <children>
+                                <JFXButton alignment="CENTER" contentDisplay="GRAPHIC_ONLY" focusTraversable="false" onAction="#openFileChooser" prefHeight="38.0" prefWidth="38.0">
+                                    <graphic>
+                                        <MaterialDesignIconView fill="#444444" glyphName="PENCIL" size="20" />
+                                    </graphic>
+                                </JFXButton>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+                <Separator layoutX="257.0" layoutY="84.0" orientation="VERTICAL" prefHeight="463.0" prefWidth="8.0" />
+                <Separator layoutX="13.0" layoutY="284.0" prefHeight="2.0" prefWidth="237.0" />
+                <Label layoutX="25.0" layoutY="301.0" text="Tài khoản" textFill="#2b579a">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Label>
+                <AnchorPane fx:id="paneAccount" layoutX="35.0" layoutY="347.0" prefHeight="223.0" prefWidth="188.0">
+                    <children>
+                        <JFXTextField fx:id="txtUser" labelFloat="true" prefHeight="30.0" prefWidth="188.0" promptText="Tên người dùng" style="-fx-border-color: #ddd;" unFocusColor="WHITE" />
+                        <JFXPasswordField fx:id="txtPassword" labelFloat="true" layoutY="60.0" prefHeight="30.0" prefWidth="188.0" promptText="Mật Khẩu" style="-fx-background-color: white; -fx-border-color: #ddd;" unFocusColor="WHITE" />
+                        <AnchorPane fx:id="paneButtonAccount" layoutX="98.0" layoutY="185.0" prefHeight="30.0" prefWidth="83.0" visible="false">
+                            <children>
+                                <JFXButton contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#clickSavePassword" prefHeight="30.0" prefWidth="38.0" style="-fx-background-insets: 1; -fx-background-color: white; -fx-border-color: #ddd; -fx-text-fill: #2B579A;" text="Save" textFill="WHITE">
+                                    <graphic>
+                                        <FontAwesomeIconView fill="#2b579a" glyphName="SAVE" size="20" textAlignment="CENTER" wrappingWidth="23.714284896850586" />
+                                    </graphic>
+                                </JFXButton>
+                                <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="45.0" mnemonicParsing="false" onAction="#clickCancelPassword" prefHeight="30.0" prefWidth="38.0" style="-fx-background-insets: 1; -fx-background-color: white; -fx-border-color: #ddd; -fx-text-fill: #2B579A;" text="Save" textFill="WHITE">
+                                    <graphic>
+                                        <MaterialDesignIconView fill="#2b579a" glyphName="CLOSE" size="20" />
+                                    </graphic>
+                                </JFXButton>
+                            </children>
+                        </AnchorPane>
+                        <JFXPasswordField fx:id="txtConfirm" labelFloat="true" layoutY="122.0" prefHeight="30.0" prefWidth="188.0" promptText="Confirm Password" style="-fx-background-color: white; -fx-border-color: #ddd;" unFocusColor="WHITE" visible="false" />
+                    </children>
+                </AnchorPane>
+                <Label layoutX="274.0" layoutY="84.0" text="Thông tin" textFill="#2b579a">
+                    <font>
+                        <Font size="25.0" />
+                    </font>
+                </Label>
+                <AnchorPane fx:id="paneCV" layoutX="293.0" layoutY="147.0" stylesheets="@../../Style/disablePane.css">
+                    <children>
+                        <JFXTextField fx:id="txtFullName" focusColor="#2b579a" labelFloat="true" prefHeight="30.0" prefWidth="254.0" promptText="Họ và tên" style="-fx-border-color: #ddd;" unFocusColor="WHITE" />
+                        <JFXTextField fx:id="txtPermisson" focusColor="#2b579a" labelFloat="true" layoutY="56.0" prefHeight="30.0" prefWidth="254.0" promptText="Quyền truy cập" style="-fx-border-color: #ddd;" unFocusColor="WHITE" />
+                        <JFXTextField fx:id="txtAge" focusColor="#2b579a" labelFloat="true" layoutY="112.0" prefHeight="30.0" prefWidth="254.0" promptText="Tuổi" style="-fx-border-color: #ddd;" unFocusColor="WHITE" />
+                        <JFXTextField fx:id="txtPhone" focusColor="#2b579a" labelFloat="true" layoutY="165.0" prefHeight="30.0" prefWidth="254.0" promptText="Số điện thoại" style="-fx-border-color: #ddd;" unFocusColor="WHITE" />
+                        <CheckBox fx:id="chkGender" layoutX="54.0" layoutY="220.0" mnemonicParsing="false" text="Nam" />
+                        <JFXTextArea fx:id="txtAddress" labelFloat="true" layoutY="252.0" prefHeight="101.0" prefWidth="254.0" promptText="Địa chỉ" style="-fx-border-color: #ddd;" unFocusColor="WHITE" />
+                    </children>
+                </AnchorPane>
+                <AnchorPane fx:id="paneButton" disable="true" layoutX="424.0" layoutY="515.0">
+                    <children>
+                        <JFXButton layoutX="63.0" mnemonicParsing="false" onAction="#clickCancel" prefHeight="30.0" prefWidth="60.0" style="-fx-background-insets: 1; -fx-background-color: white; -fx-border-color: #ddd; -fx-text-fill: #2B579A;" text="Cancel" textFill="WHITE" />
+                        <JFXButton mnemonicParsing="false" onAction="#clickSave" prefHeight="30.0" prefWidth="60.0" style="-fx-background-insets: 1; -fx-background-color: white; -fx-border-color: #ddd; -fx-text-fill: #2B579A;" text="Save" textFill="WHITE" />
+                    </children>
+                </AnchorPane>
+            </children>
+        </AnchorPane>
+    </children>
+</HBox>
