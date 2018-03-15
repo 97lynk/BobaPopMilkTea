@@ -1,4 +1,5 @@
-﻿Đồ án cuối kì
+Video demo: https://youtu.be/Y4S6Ia9-6BY
+Đồ án cuối kì
  |____Học phần: Đồ án 1
  |____Học kì: 1 NH 2017-2018
  |____Giảng viên: Lê Thị Minh Châu
