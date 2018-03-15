@@ -44,6 +44,7 @@ public class Indexes {
     public static final Index ITEMS_PRIMARY = Indexes0.ITEMS_PRIMARY;
     public static final Index TABLES_PRIMARY = Indexes0.TABLES_PRIMARY;
     public static final Index USERS_PRIMARY = Indexes0.USERS_PRIMARY;
+    public static final Index USERS_USERNAME = Indexes0.USERS_USERNAME;
 
     // -------------------------------------------------------------------------
     // [#1459] distribute members to avoid static initialisers > 64kb
@@ -59,5 +60,6 @@ public class Indexes {
         public static Index ITEMS_PRIMARY = createIndex("PRIMARY", Items.ITEMS, new OrderField[] { Items.ITEMS.BILLID, Items.ITEMS.DRINKID }, true);
         public static Index TABLES_PRIMARY = createIndex("PRIMARY", Tables.TABLES, new OrderField[] { Tables.TABLES.TABLEID }, true);
         public static Index USERS_PRIMARY = createIndex("PRIMARY", Users.USERS, new OrderField[] { Users.USERS.ID }, true);
+        public static Index USERS_USERNAME = createIndex("UserName", Users.USERS, new OrderField[] { Users.USERS.USERNAME }, true);
     }
 }

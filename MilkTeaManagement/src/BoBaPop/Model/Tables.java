@@ -33,32 +33,32 @@ import javax.annotation.Generated;
 public class Tables {
 
     /**
-     * InnoDB free: 23552 kB; (`TableID`) REFER `db_milktea/tables`(`TableID`)
+     * The table <code>db_milktea.bills</code>.
      */
     public static final Bills BILLS = BoBaPop.Model.tables.Bills.BILLS;
 
     /**
-     * InnoDB free: 23552 kB; (`DrinkTypeID`) REFER `db_milktea/drinktypes`(`DrinkTypeI
+     * The table <code>db_milktea.drinks</code>.
      */
     public static final Drinks DRINKS = BoBaPop.Model.tables.Drinks.DRINKS;
 
     /**
-     * InnoDB free: 23552 kB
+     * The table <code>db_milktea.drinktypes</code>.
      */
     public static final Drinktypes DRINKTYPES = BoBaPop.Model.tables.Drinktypes.DRINKTYPES;
 
     /**
-     * InnoDB free: 23552 kB; (`BillID`) REFER `db_milktea/bills`(`BillID`); (`DrinkID`
+     * The table <code>db_milktea.items</code>.
      */
     public static final Items ITEMS = BoBaPop.Model.tables.Items.ITEMS;
 
     /**
-     * InnoDB free: 23552 kB
+     * The table <code>db_milktea.tables</code>.
      */
     public static final BoBaPop.Model.tables.Tables TABLES = BoBaPop.Model.tables.Tables.TABLES;
 
     /**
-     * InnoDB free: 23552 kB
+     * The table <code>db_milktea.users</code>.
      */
     public static final Users USERS = BoBaPop.Model.tables.Users.USERS;
 

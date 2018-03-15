@@ -41,7 +41,7 @@ import org.jooq.impl.SchemaImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class DbMilktea extends SchemaImpl {
 
-    private static final long serialVersionUID = 1427973178;
+    private static final long serialVersionUID = -1149890120;
 
     /**
      * The reference instance of <code>db_milktea</code>
@@ -49,32 +49,32 @@ public class DbMilktea extends SchemaImpl {
     public static final DbMilktea DB_MILKTEA = new DbMilktea();
 
     /**
-     * InnoDB free: 23552 kB; (`TableID`) REFER `db_milktea/tables`(`TableID`)
+     * The table <code>db_milktea.bills</code>.
      */
     public final Bills BILLS = BoBaPop.Model.tables.Bills.BILLS;
 
     /**
-     * InnoDB free: 23552 kB; (`DrinkTypeID`) REFER `db_milktea/drinktypes`(`DrinkTypeI
+     * The table <code>db_milktea.drinks</code>.
      */
     public final Drinks DRINKS = BoBaPop.Model.tables.Drinks.DRINKS;
 
     /**
-     * InnoDB free: 23552 kB
+     * The table <code>db_milktea.drinktypes</code>.
      */
     public final Drinktypes DRINKTYPES = BoBaPop.Model.tables.Drinktypes.DRINKTYPES;
 
     /**
-     * InnoDB free: 23552 kB; (`BillID`) REFER `db_milktea/bills`(`BillID`); (`DrinkID`
+     * The table <code>db_milktea.items</code>.
      */
     public final Items ITEMS = BoBaPop.Model.tables.Items.ITEMS;
 
     /**
-     * InnoDB free: 23552 kB
+     * The table <code>db_milktea.tables</code>.
      */
     public final Tables TABLES = BoBaPop.Model.tables.Tables.TABLES;
 
     /**
-     * InnoDB free: 23552 kB
+     * The table <code>db_milktea.users</code>.
      */
     public final Users USERS = BoBaPop.Model.tables.Users.USERS;
 

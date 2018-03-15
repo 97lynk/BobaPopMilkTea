@@ -19,6 +19,7 @@ import BoBaPop.Model.tables.records.UsersRecord;
 
 import javax.annotation.Generated;
 
+import org.jooq.ForeignKey;
 import org.jooq.Identity;
 import org.jooq.UniqueKey;
 import org.jooq.impl.AbstractKeys;
@@ -58,11 +59,16 @@ public class Keys {
     public static final UniqueKey<ItemsRecord> KEY_ITEMS_PRIMARY = UniqueKeys0.KEY_ITEMS_PRIMARY;
     public static final UniqueKey<TablesRecord> KEY_TABLES_PRIMARY = UniqueKeys0.KEY_TABLES_PRIMARY;
     public static final UniqueKey<UsersRecord> KEY_USERS_PRIMARY = UniqueKeys0.KEY_USERS_PRIMARY;
+    public static final UniqueKey<UsersRecord> KEY_USERS_USERNAME = UniqueKeys0.KEY_USERS_USERNAME;
 
     // -------------------------------------------------------------------------
     // FOREIGN KEY definitions
     // -------------------------------------------------------------------------
 
+    public static final ForeignKey<BillsRecord, TablesRecord> BILLS_IBFK_2 = ForeignKeys0.BILLS_IBFK_2;
+    public static final ForeignKey<DrinksRecord, DrinktypesRecord> DRINKS_IBFK_1 = ForeignKeys0.DRINKS_IBFK_1;
+    public static final ForeignKey<ItemsRecord, BillsRecord> ITEMS_IBFK_1 = ForeignKeys0.ITEMS_IBFK_1;
+    public static final ForeignKey<ItemsRecord, DrinksRecord> ITEMS_IBFK_2 = ForeignKeys0.ITEMS_IBFK_2;
 
     // -------------------------------------------------------------------------
     // [#1459] distribute members to avoid static initialisers > 64kb
@@ -83,5 +89,13 @@ public class Keys {
         public static final UniqueKey<ItemsRecord> KEY_ITEMS_PRIMARY = createUniqueKey(Items.ITEMS, "KEY_items_PRIMARY", Items.ITEMS.BILLID, Items.ITEMS.DRINKID);
         public static final UniqueKey<TablesRecord> KEY_TABLES_PRIMARY = createUniqueKey(Tables.TABLES, "KEY_tables_PRIMARY", Tables.TABLES.TABLEID);
         public static final UniqueKey<UsersRecord> KEY_USERS_PRIMARY = createUniqueKey(Users.USERS, "KEY_users_PRIMARY", Users.USERS.ID);
+        public static final UniqueKey<UsersRecord> KEY_USERS_USERNAME = createUniqueKey(Users.USERS, "KEY_users_UserName", Users.USERS.USERNAME);
+    }
+
+    private static class ForeignKeys0 extends AbstractKeys {
+        public static final ForeignKey<BillsRecord, TablesRecord> BILLS_IBFK_2 = createForeignKey(BoBaPop.Model.Keys.KEY_TABLES_PRIMARY, Bills.BILLS, "bills_ibfk_2", Bills.BILLS.TABLEID);
+        public static final ForeignKey<DrinksRecord, DrinktypesRecord> DRINKS_IBFK_1 = createForeignKey(BoBaPop.Model.Keys.KEY_DRINKTYPES_PRIMARY, Drinks.DRINKS, "drinks_ibfk_1", Drinks.DRINKS.DRINKTYPEID);
+        public static final ForeignKey<ItemsRecord, BillsRecord> ITEMS_IBFK_1 = createForeignKey(BoBaPop.Model.Keys.KEY_BILLS_PRIMARY, Items.ITEMS, "items_ibfk_1", Items.ITEMS.BILLID);
+        public static final ForeignKey<ItemsRecord, DrinksRecord> ITEMS_IBFK_2 = createForeignKey(BoBaPop.Model.Keys.KEY_DRINKS_PRIMARY, Items.ITEMS, "items_ibfk_2", Items.ITEMS.DRINKID);
     }
 }
