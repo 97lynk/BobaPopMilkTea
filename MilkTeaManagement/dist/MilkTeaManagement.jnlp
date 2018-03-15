@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="MilkTeaManagement.jar" size="2669061" download="eager" />
+    <jar href="MilkTeaManagement.jar" size="2669962" download="eager" />
     <jar href="lib\TrayTester.jar" size="52070" download="eager" />
     <jar href="lib\commons-beanutils-1.9.0.jar" size="230951" download="eager" />
     <jar href="lib\commons-codec-1.5.jar" size="73098" download="eager" />

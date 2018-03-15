@@ -49,6 +49,7 @@ public class Login implements Initializable {
     @FXML
     private void onClickButtonSignIn(ActionEvent event) {
         System.out.println("You are click login...");
+        ConnectToMySql.initialize();
         txtUser.validate();
         txtPassword.validate();
 

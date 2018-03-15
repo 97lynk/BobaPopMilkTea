@@ -27,7 +27,6 @@ public class BoBaPopMain extends Application {
     }
 
     public static void main(String[] args) {
-        ConnectToMySql.initialize();
         launch(args);
     }
 }

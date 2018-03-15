@@ -63,8 +63,11 @@ public class TabItems implements Initializable {
     private TableView<VwItemsRecord> tableItem;
     @FXML
     private JFXButton btnSave;
-    @FXML
     private JFXButton btnCancel;
+    @FXML
+    private JFXButton btnDelete;
+    @FXML
+    private JFXButton btnAdd;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -166,11 +169,7 @@ public class TabItems implements Initializable {
 
             cbxDrink.setAccessibleText(record.getDrinkid().toString());
         } catch (Exception ex) {
-            MessageBox.showException(
-                    "Lỗi xảy ra",
-                    ex.getClass().getSimpleName(),
-                    new TextArea(ex.getMessage()),
-                    Alert.AlertType.ERROR);
+
         }
     }
 
@@ -192,15 +191,12 @@ public class TabItems implements Initializable {
         });
     }
 
-    @FXML
     private void clickAddItem(ActionEvent event) {
         addItem = true;
         btnSave.setDisable(false);
         btnCancel.setDisable(false);
-
     }
 
-    @FXML
     private void clickEditItem(ActionEvent event) {
         addItem = false;
         btnSave.setDisable(false);
@@ -209,27 +205,13 @@ public class TabItems implements Initializable {
     }
 
     @FXML
-    private void clickRemoveItem(ActionEvent event) {
-        try {
-            int billID = Integer.parseInt(tableItem.getAccessibleText());
-            int drinkID = Integer.parseInt(cbxDrink.getAccessibleText());
-            ItemsRecord itemsRecord = ConnectToMySql.context.fetchAny(ITEMS, ITEMS.BILLID.eq(billID)
-                    .and(ITEMS.DRINKID.eq(drinkID)));
-            itemsRecord.delete();
-            clickRefresh(event);
-        } catch (NumberFormatException ex) {
-            MessageBox.showException(
-                    "Lỗi xảy ra",
-                    ex.getClass().getSimpleName(),
-                    new TextArea(ex.getMessage()),
-                    Alert.AlertType.ERROR);
-        }
-    }
-
-    @FXML
     private void clickSave(ActionEvent event) {
         try {
+            int drinkID = cbxDrink.getValue().getDrinkid();
             int billID = Integer.parseInt(tableItem.getAccessibleText());
+            addItem = (ConnectToMySql.context.fetchAny(ITEMS, ITEMS.BILLID.eq(billID)
+                    .and(ITEMS.DRINKID.eq(drinkID))) == null);
+
             if (addItem) {
                 ItemsRecord itemsRecord = ConnectToMySql.context.newRecord(ITEMS);
                 itemsRecord.setBillid(billID);
@@ -240,17 +222,20 @@ public class TabItems implements Initializable {
                 itemsRecord.setQuantity(Integer.parseInt(txtAmount.getText()));
                 itemsRecord.setTotal(Double.parseDouble(txtPrice.getText()) * Integer.parseInt(txtAmount.getText()));
                 itemsRecord.store();
+                System.out.println("Thêm");
+                System.out.println(itemsRecord);
             } else {
-                if (cbxDrink.getAccessibleText() == null) {
+                if (cbxDrink.getValue().getDrinkid() == null) {
                     return;
                 }
-                int drinkID = Integer.parseInt(cbxDrink.getAccessibleText());
                 ItemsRecord itemsRecord = ConnectToMySql.context.fetchAny(ITEMS, ITEMS.BILLID.eq(billID)
                         .and(ITEMS.DRINKID.eq(drinkID)));
                 itemsRecord.setDrinkid(cbxDrink.getValue().getDrinkid());
                 itemsRecord.setQuantity(Integer.parseInt(txtAmount.getText()));
                 itemsRecord.setTotal(Double.parseDouble(txtPrice.getText()) * Integer.parseInt(txtAmount.getText()));
                 itemsRecord.update();
+                System.out.println("Sửa");
+                System.out.println(itemsRecord);
             }
             clickRefresh(event);
         } catch (NumberFormatException ex) {
@@ -266,13 +251,11 @@ public class TabItems implements Initializable {
         }
     }
 
-    @FXML
     private void clickCancel(ActionEvent event) {
         btnSave.setDisable(true);
         btnCancel.setDisable(true);
     }
 
-    @FXML
     private void clickRefresh(ActionEvent event) {
         try {
 
@@ -296,6 +279,55 @@ public class TabItems implements Initializable {
                     new TextArea(ex.getMessage()),
                     Alert.AlertType.ERROR);
         }
+    }
+
+    @FXML
+    private void clickDelete(ActionEvent event) {
+        try {
+            int billID = Integer.parseInt(tableItem.getAccessibleText());
+            int drinkID = Integer.parseInt(cbxDrink.getAccessibleText());
+            ItemsRecord itemsRecord = ConnectToMySql.context.fetchAny(ITEMS, ITEMS.BILLID.eq(billID)
+                    .and(ITEMS.DRINKID.eq(drinkID)));
+            itemsRecord.delete();
+            clickRefresh(event);
+        } catch (NumberFormatException ex) {
+            MessageBox.showException(
+                    "Lỗi xảy ra",
+                    ex.getClass().getSimpleName(),
+                    new TextArea(ex.getMessage()),
+                    Alert.AlertType.ERROR);
+        }
+    }
+
+    @FXML
+    private void clickAdd(ActionEvent event) {
+        try {
+            int billID = Integer.parseInt(tableItem.getAccessibleText());
+            if (cbxDrink.getAccessibleText() == null) {
+                return;
+            }
+            int drinkID = Integer.parseInt(cbxDrink.getAccessibleText());
+            ItemsRecord itemsRecord = ConnectToMySql.context.fetchAny(ITEMS,
+                    ITEMS.BILLID.eq(billID)
+                            .and(ITEMS.DRINKID.eq(drinkID)));
+            itemsRecord.setQuantity(
+                    itemsRecord.getQuantity() + Integer.parseInt(txtAmount.getText()));
+            itemsRecord.setTotal(
+                    itemsRecord.getTotal() + Double.parseDouble(txtPrice.getText()) * Integer.parseInt(txtAmount.getText()));
+            itemsRecord.update();
+            clickRefresh(event);
+        } catch (NumberFormatException ex) {
+            MessageBox.showException(
+                    "Lỗi xảy ra",
+                    ex.getClass().getSimpleName(),
+                    new TextArea(ex.getMessage()),
+                    Alert.AlertType.ERROR);
+        } catch (DataAccessException ex) {
+            MessageBox.show(
+                    "Lỗi xảy ra", "Thức uống",
+                    "Thức uống này đã có", Alert.AlertType.ERROR);
+        }
+
     }
 
 }

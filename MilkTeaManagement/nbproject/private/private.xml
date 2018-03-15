@@ -5,15 +5,6 @@
         <group name="Web">
             <file>file:/C:/GoogleDrive/JavaCode/MilkTeaManagement/build.xml</file>
         </group>
-        <group>
-            <file>file:/E:/GoogleDrive/JavaCode/MilkTeaManagement/src/BoBaPop/Util/CustomizeNode.java</file>
-            <file>file:/E:/GoogleDrive/JavaCode/MilkTeaManagement/src/BoBaPop/Controller/TabItems.java</file>
-            <file>file:/E:/GoogleDrive/JavaCode/MilkTeaManagement/src/BoBaPop/Controller/BillManagement.java</file>
-            <file>file:/E:/GoogleDrive/JavaCode/MilkTeaManagement/src/BoBaPop/Controller/Login.java</file>
-            <file>file:/E:/GoogleDrive/JavaCode/MilkTeaManagement/src/BoBaPop/Controller/Table.java</file>
-            <file>file:/E:/GoogleDrive/JavaCode/MilkTeaManagement/src/BoBaPop/Controller/CashierWorkspace.java</file>
-            <file>file:/E:/GoogleDrive/JavaCode/MilkTeaManagement/src/BoBaPop/Util/ConfigureMyGrid.java</file>
-            <file>file:/E:/GoogleDrive/JavaCode/MilkTeaManagement/src/BoBaPop/Controller/TableManagement.java</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>

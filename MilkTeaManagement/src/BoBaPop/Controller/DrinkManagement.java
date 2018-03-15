@@ -92,7 +92,7 @@ public class DrinkManagement implements Initializable {
         loadDrinkType();
     }
 
-    private void loadStructureTableViewDrink() {
+    private void loadStructureTableViewDrink() { //load cau truc
         Drinks.DRINKS.fieldStream()
                 .forEach(col -> {
                     // tạo tablecolumn với header là tên trường trong vw_billdetails
@@ -107,7 +107,7 @@ public class DrinkManagement implements Initializable {
 
     }
 
-    private void loadDataTableViewDrink() {
+    private void loadDataTableViewDrink() {  // load database
 
         // load data cho bảng
         try {
@@ -131,7 +131,7 @@ public class DrinkManagement implements Initializable {
         }
     }
 
-    private void loadDrinkType() {
+    private void loadDrinkType() { 
         try {
             // khởi tạo dữ liệu cho combobox
             ObservableList<DrinktypesRecord> drinktypesRecords
