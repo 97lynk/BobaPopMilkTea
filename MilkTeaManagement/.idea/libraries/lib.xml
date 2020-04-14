@@ -1,0 +1,33 @@
+<component name="libraryTable">
+  <library name="lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/jooq-codegen-3.10.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jasperreports-javaflow-6.2.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jooq-scala_2.12-3.10.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jasperreports-6.2.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jooq-meta-3.10.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/swing-layout-1.0.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/fontawesomefx-8.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/TrayTester.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jooq-meta-extensions-3.10.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/poi-3.13-20150929.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jasperreports-fonts-6.2.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/mysql-connector-java-5.1.23-bin.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/controlsfx-8.40.14.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-beanutils-1.9.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-collections-3.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jooq-codegen-maven-3.10.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jooq-checker-3.10.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/groovy-all-1.7.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-digester-2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-codec-1.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-logging-1.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jooq-3.10.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-io-2.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jooq-scala_2.11-3.10.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jfoenix.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

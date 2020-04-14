@@ -1,0 +1,33 @@
+<component name="libraryTable">
+  <library name="lib1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/dist/lib/commons-logging-1.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/controlsfx-8.40.14.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/jooq-meta-extensions-3.10.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/commons-io-2.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/jasperreports-6.2.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/jfoenix.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/jooq-scala_2.12-3.10.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/swing-layout-1.0.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/commons-codec-1.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/jasperreports-fonts-6.2.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/jasperreports-javaflow-6.2.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/jooq-codegen-3.10.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/jooq-checker-3.10.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/commons-collections-3.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/commons-digester-2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/jooq-3.10.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/jooq-meta-3.10.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/jooq-codegen-maven-3.10.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/mysql-connector-java-5.1.23-bin.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/poi-3.13-20150929.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/fontawesomefx-8.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/groovy-all-1.7.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/commons-beanutils-1.9.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/jooq-scala_2.11-3.10.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/lib/TrayTester.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
