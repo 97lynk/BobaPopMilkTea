@@ -1,0 +1,26 @@
+/*.my-column-header .label{
+
+}*/
+.table-view .label{
+    -fx-text-fill: white;  
+}
+.table-row-cell:selected {
+    -fx-background-color: #89BAD4;
+    -fx-table-cell-border-color: transparent;
+}
+.table-view .column-header,
+.table-view .column-header .filler,
+.table-view .column-header-background .filler {
+
+    -fx-alignment: CENTER;
+    -fx-background-color: rgba(0,105,161, 0.8);
+    -fx-font-weight: bold;
+    -fx-size: 30px;
+    -fx-table-cell-border-color: transparent;
+
+}
+.table-view:focused {
+    -fx-background-color: white;
+    -fx-padding: 0;
+    -fx-border-color: #ddd;
+}

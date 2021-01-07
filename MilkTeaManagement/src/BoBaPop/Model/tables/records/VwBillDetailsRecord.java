@@ -29,101 +29,101 @@ import org.jooq.impl.TableRecordImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class VwBillDetailsRecord extends TableRecordImpl<VwBillDetailsRecord> implements Record7<Integer, Integer, Timestamp, String, Double, Byte, Byte> {
 
-    private static final long serialVersionUID = -2141620161;
+    private static final long serialVersionUID = -1600541258;
 
     /**
-     * Setter for <code>db_milktea.vw_bill_details.BillID</code>.
+     * Setter for <code>db_milktea.VW_BILL_DETAILS.BillID</code>.
      */
     public void setBillid(Integer value) {
         set(0, value);
     }
 
     /**
-     * Getter for <code>db_milktea.vw_bill_details.BillID</code>.
+     * Getter for <code>db_milktea.VW_BILL_DETAILS.BillID</code>.
      */
     public Integer getBillid() {
         return (Integer) get(0);
     }
 
     /**
-     * Setter for <code>db_milktea.vw_bill_details.TableID</code>.
+     * Setter for <code>db_milktea.VW_BILL_DETAILS.TableID</code>.
      */
     public void setTableid(Integer value) {
         set(1, value);
     }
 
     /**
-     * Getter for <code>db_milktea.vw_bill_details.TableID</code>.
+     * Getter for <code>db_milktea.VW_BILL_DETAILS.TableID</code>.
      */
     public Integer getTableid() {
         return (Integer) get(1);
     }
 
     /**
-     * Setter for <code>db_milktea.vw_bill_details.OrderTime</code>.
+     * Setter for <code>db_milktea.VW_BILL_DETAILS.OrderTime</code>.
      */
     public void setOrdertime(Timestamp value) {
         set(2, value);
     }
 
     /**
-     * Getter for <code>db_milktea.vw_bill_details.OrderTime</code>.
+     * Getter for <code>db_milktea.VW_BILL_DETAILS.OrderTime</code>.
      */
     public Timestamp getOrdertime() {
         return (Timestamp) get(2);
     }
 
     /**
-     * Setter for <code>db_milktea.vw_bill_details.TableName</code>.
+     * Setter for <code>db_milktea.VW_BILL_DETAILS.TableName</code>.
      */
     public void setTablename(String value) {
         set(3, value);
     }
 
     /**
-     * Getter for <code>db_milktea.vw_bill_details.TableName</code>.
+     * Getter for <code>db_milktea.VW_BILL_DETAILS.TableName</code>.
      */
     public String getTablename() {
         return (String) get(3);
     }
 
     /**
-     * Setter for <code>db_milktea.vw_bill_details.GrandTotal</code>.
+     * Setter for <code>db_milktea.VW_BILL_DETAILS.GrandTotal</code>.
      */
     public void setGrandtotal(Double value) {
         set(4, value);
     }
 
     /**
-     * Getter for <code>db_milktea.vw_bill_details.GrandTotal</code>.
+     * Getter for <code>db_milktea.VW_BILL_DETAILS.GrandTotal</code>.
      */
     public Double getGrandtotal() {
         return (Double) get(4);
     }
 
     /**
-     * Setter for <code>db_milktea.vw_bill_details.IsPaid</code>.
+     * Setter for <code>db_milktea.VW_BILL_DETAILS.IsPaid</code>.
      */
     public void setIspaid(Byte value) {
         set(5, value);
     }
 
     /**
-     * Getter for <code>db_milktea.vw_bill_details.IsPaid</code>.
+     * Getter for <code>db_milktea.VW_BILL_DETAILS.IsPaid</code>.
      */
     public Byte getIspaid() {
         return (Byte) get(5);
     }
 
     /**
-     * Setter for <code>db_milktea.vw_bill_details.IsStaying</code>.
+     * Setter for <code>db_milktea.VW_BILL_DETAILS.IsStaying</code>.
      */
     public void setIsstaying(Byte value) {
         set(6, value);
     }
 
     /**
-     * Getter for <code>db_milktea.vw_bill_details.IsStaying</code>.
+     * Getter for <code>db_milktea.VW_BILL_DETAILS.IsStaying</code>.
      */
     public Byte getIsstaying() {
         return (Byte) get(6);
@@ -400,14 +400,14 @@ public class VwBillDetailsRecord extends TableRecordImpl<VwBillDetailsRecord> im
     // -------------------------------------------------------------------------
 
     /**
-     * Create a detached VwBillDetailsRecord
+     * Create a detached VwBilldetailsRecord
      */
     public VwBillDetailsRecord() {
         super(VwBillDetails.VW_BILL_DETAILS);
     }
 
     /**
-     * Create a detached, initialised VwBillDetailsRecord
+     * Create a detached, initialised VwBilldetailsRecord
      */
     public VwBillDetailsRecord(Integer billid, Integer tableid, Timestamp ordertime, String tablename, Double grandtotal, Byte ispaid, Byte isstaying) {
         super(VwBillDetails.VW_BILL_DETAILS);

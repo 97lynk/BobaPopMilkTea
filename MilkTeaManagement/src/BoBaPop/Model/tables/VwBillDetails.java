@@ -33,10 +33,10 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class VwBillDetails extends TableImpl<VwBillDetailsRecord> {
 
-    private static final long serialVersionUID = -1071210164;
+    private static final long serialVersionUID = 5011579;
 
     /**
-     * The reference instance of <code>db_milktea.vw_bill_details</code>
+     * The reference instance of <code>db_milktea.vw_billdetails</code>
      */
     public static final VwBillDetails VW_BILL_DETAILS = new VwBillDetails();
 
@@ -49,56 +49,56 @@ public class VwBillDetails extends TableImpl<VwBillDetailsRecord> {
     }
 
     /**
-     * The column <code>db_milktea.vw_bill_details.BillID</code>.
+     * The column <code>db_milktea.vw_billdetails.BillID</code>.
      */
-    public final TableField<VwBillDetailsRecord, Integer> BILLID = createField("BillID", org.jooq.impl.SQLDataType.INTEGER.nullable(false).defaultValue(org.jooq.impl.DSL.inline("0", org.jooq.impl.SQLDataType.INTEGER)), this, "");
+    public final TableField<VwBillDetailsRecord, Integer> BILLID = createField("BillID", org.jooq.impl.SQLDataType.INTEGER.nullable(false).defaultValue(DSL.inline("0", org.jooq.impl.SQLDataType.INTEGER)), this, "");
 
     /**
-     * The column <code>db_milktea.vw_bill_details.TableID</code>.
+     * The column <code>db_milktea.vw_billdetails.TableID</code>.
      */
-    public final TableField<VwBillDetailsRecord, Integer> TABLEID = createField("TableID", org.jooq.impl.SQLDataType.INTEGER.nullable(false).defaultValue(org.jooq.impl.DSL.inline("0", org.jooq.impl.SQLDataType.INTEGER)), this, "");
+    public final TableField<VwBillDetailsRecord, Integer> TABLEID = createField("TableID", org.jooq.impl.SQLDataType.INTEGER.nullable(false).defaultValue(DSL.inline("0", org.jooq.impl.SQLDataType.INTEGER)), this, "");
 
     /**
-     * The column <code>db_milktea.vw_bill_details.OrderTime</code>.
+     * The column <code>db_milktea.vw_billdetails.OrderTime</code>.
      */
     public final TableField<VwBillDetailsRecord, Timestamp> ORDERTIME = createField("OrderTime", org.jooq.impl.SQLDataType.TIMESTAMP, this, "");
 
     /**
-     * The column <code>db_milktea.vw_bill_details.TableName</code>.
+     * The column <code>db_milktea.vw_billdetails.TableName</code>.
      */
     public final TableField<VwBillDetailsRecord, String> TABLENAME = createField("TableName", org.jooq.impl.SQLDataType.VARCHAR(50), this, "");
 
     /**
-     * The column <code>db_milktea.vw_bill_details.GrandTotal</code>.
+     * The column <code>db_milktea.vw_billdetails.GrandTotal</code>.
      */
     public final TableField<VwBillDetailsRecord, Double> GRANDTOTAL = createField("GrandTotal", org.jooq.impl.SQLDataType.FLOAT, this, "");
 
     /**
-     * The column <code>db_milktea.vw_bill_details.IsPaid</code>.
+     * The column <code>db_milktea.vw_billdetails.IsPaid</code>.
      */
     public final TableField<VwBillDetailsRecord, Byte> ISPAID = createField("IsPaid", org.jooq.impl.SQLDataType.TINYINT, this, "");
 
     /**
-     * The column <code>db_milktea.vw_bill_details.IsStaying</code>.
+     * The column <code>db_milktea.vw_billdetails.IsStaying</code>.
      */
     public final TableField<VwBillDetailsRecord, Byte> ISSTAYING = createField("IsStaying", org.jooq.impl.SQLDataType.TINYINT, this, "");
 
     /**
-     * Create a <code>db_milktea.vw_bill_details</code> table reference
+     * Create a <code>db_milktea.vw_billdetails</code> table reference
      */
     public VwBillDetails() {
         this(DSL.name("vw_bill_details"), null);
     }
 
     /**
-     * Create an aliased <code>db_milktea.vw_bill_details</code> table reference
+     * Create an aliased <code>db_milktea.vw_billdetails</code> table reference
      */
     public VwBillDetails(String alias) {
         this(DSL.name(alias), VW_BILL_DETAILS);
     }
 
     /**
-     * Create an aliased <code>db_milktea.vw_bill_details</code> table reference
+     * Create an aliased <code>db_milktea.vw_billdetails</code> table reference
      */
     public VwBillDetails(Name alias) {
         this(alias, VW_BILL_DETAILS);

@@ -18,7 +18,7 @@ public class ConnectToMySql {
 
     //  Database credentials
     private static final String USER = "root";
-    private static final String PASS = "lumia435";
+    private static final String PASS = "123456";
 
     public static DSLContext context = null;
 

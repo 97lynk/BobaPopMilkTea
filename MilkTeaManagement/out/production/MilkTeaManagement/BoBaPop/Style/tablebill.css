@@ -1,0 +1,19 @@
+
+.table-view .label{
+    -fx-text-fill: white;  
+}
+.table-row-cell:selected {
+    -fx-background-color: #89BAD4;
+    -fx-table-cell-border-color: transparent;
+}
+.table-view .column-header,
+.table-view .column-header .filler,
+.table-view .column-header-background .filler {
+
+    -fx-alignment: CENTER;
+    -fx-background-color:  #0F9D58;
+    -fx-font-weight: bold;
+    -fx-size: 30px;
+    -fx-table-cell-border-color: transparent;
+
+}
