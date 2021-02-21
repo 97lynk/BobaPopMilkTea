@@ -1,7 +1,8 @@
 # Milktea Store Management
 
 ## Demonstration
-Video demo: https://youtu.be/Y4S6Ia9-6BY
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/Y4S6Ia9-6BY/0.jpg)](https://youtu.be/Y4S6Ia9-6BY)
+Video demo: 
 
 ## Matertials
 - Source code in `MilkTeaManagement/`
