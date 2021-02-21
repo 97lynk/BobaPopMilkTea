@@ -14,7 +14,11 @@ public class ConnectToMySql {
 
     // JDBC driver name and database URL
     private static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-    private static final String DB_URL = "jdbc:mysql://localhost/db_milktea?useUnicode=yes&characterEncoding=UTF-8";
+    private static final String DB_HOST = "localhost";
+    private static final String DB_PORT = "3306";
+    private static final String DB_NAME = "db_milktea";
+
+    private static final String DB_URL = String.format("jdbc:mysql://%s:%s/%s?useUnicode=yes&characterEncoding=UTF-8", DB_HOST, DB_PORT, DB_NAME);
 
     //  Database credentials
     private static final String USER = "root";
