@@ -22,5 +22,5 @@ Video demo
 - Change database config in `MilkTeaManagement/src/BoBaPop/DA/ConnectToMySql.java` includes: host/port of database server, database name, credentials
 - Run project
 
-## Project status
+## Roadmap
 I will migrate this project to docker container in the future.
